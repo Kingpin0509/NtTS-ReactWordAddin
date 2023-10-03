@@ -1,9 +1,9 @@
 {
-  "name": "office-addin-taskpane-react",
-  "version": "0.0.1",
+  "name": "nietiet-gmbh-office-addin",
+  "version": "0.5.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/OfficeDev/Office-Addin-TaskPane-React.git"
+    "url": "https://github.com/Kingpin0509/NtTS-ReactOfficeAddin.git"
   },
   "license": "MIT",
   "config": {

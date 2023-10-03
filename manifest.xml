@@ -2,15 +2,15 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>2c432697-1a55-46d0-a469-010e7722960f</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Contoso</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="NtTS ReactOfficeAddin"/>
-  <Description DefaultValue="A template to get started."/>
+  <ProviderName>Michael Humann</ProviderName>
+  <DefaultLocale>de-De</DefaultLocale>
+  <DisplayName DefaultValue="Nietiet - Office Addin"/>
+  <Description DefaultValue="Addin zur Einführung unternehmensweiter Vorlagen - Im sinne der Produktivitässteigerung und förderung der Firmenidentität"/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.contoso.com/help"/>
+  <SupportUrl DefaultValue="https://www.pflanzliche-rohstoffe.eu"/>
   <AppDomains>
-    <AppDomain>https://www.contoso.com</AppDomain>
+    <AppDomain>https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
@@ -72,13 +72,13 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Get started with your sample add-in!"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Commands Group"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Show Taskpane"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Teste das erste Nietiet GmbH - Office add-in!"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Nietiet GmbH"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Vorlagen"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Your sample add-in loaded succesfully. Go to the HOME tab and click the 'Show Taskpane' button to get started."/>
-        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane"/>
+        <bt:String id="GetStarted.Description" DefaultValue="Nietiet GmbH - Vorlagen Browser erfolgreich geladen. Öffne den 'Start' Tab, klick auf 'Vorlagen' und leg los."/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Klicken um Vorlagen Browser anzuzeigen"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
