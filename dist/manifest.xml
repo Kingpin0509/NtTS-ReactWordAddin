@@ -6,17 +6,17 @@
   <DefaultLocale>de-De</DefaultLocale>
   <DisplayName DefaultValue="Nietiet - Office Addin"/>
   <Description DefaultValue="Addin zur Einführung unternehmensweiter Vorlagen - Im sinne der Produktivitässteigerung und förderung der Firmenidentität"/>
-  <IconUrl DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/assets/icon-64.png"/>
+  <IconUrl DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://www.pflanzliche-rohstoffe.eu"/>
   <AppDomains>
-    <AppDomain>https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/</AppDomain>
+    <AppDomain>https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/taskpane.html"/>
+    <SourceLocation DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -62,14 +62,14 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/assets/icon-16.png"/>
-        <bt:Image id="Icon.32x32" DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/assets/icon-80.png"/>
+        <bt:Image id="Icon.16x16" DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
-        <bt:Url id="Commands.Url" DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/commands.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://github.com/Kingpin0509/NtTS-ReactOfficeAddin/dist/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/commands.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://kingpin0509.github.io/NtTS-ReactOfficeAddin/dist/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Teste das erste Nietiet GmbH - Office add-in!"/>
