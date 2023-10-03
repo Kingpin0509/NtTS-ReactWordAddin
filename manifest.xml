@@ -4,7 +4,7 @@
   <Version>1.0.1.0</Version>
   <ProviderName>Michael Humann</ProviderName>
   <DefaultLocale>de-De</DefaultLocale>
-  <DisplayName DefaultValue="Nietiet - Office Addin"/>
+  <DisplayName DefaultValue="Vorlagenbrowser - Nietiet GmbH"/>
   <Description DefaultValue="Addin zur Einführung unternehmensweiter Vorlagen - Im sinne der Produktivitässteigerung und förderung der Firmenidentität"/>
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
@@ -72,12 +72,12 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Teste das erste Nietiet GmbH - Office add-in!"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Nietiet GmbH - Word Vorlagenbrowser!"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="Nietiet GmbH"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Vorlagen"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Nietiet GmbH - Vorlagen Browser erfolgreich geladen. Öffne den 'Start' Tab, klick auf 'Vorlagen' und leg los."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Vorlagenbrowser erfolgreich geladen. Öffne den 'Start' Tab, klick auf 'Vorlagen' und leg los."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Klicken um Vorlagen Browser anzuzeigen"/>
       </bt:LongStrings>
     </Resources>

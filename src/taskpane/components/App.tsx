@@ -66,7 +66,7 @@ export default class App extends React.Component<AppProps, AppState> {
         <Progress
           title={title}
           logo={require("./../../../assets/Nietiet GmbH Logo597.png")}
-          message="Please sideload your addin to see app body."
+          message="Initialisierung Fehlgeschlagen - Body leer - sideload?"
         />
       );
     }
@@ -80,10 +80,10 @@ export default class App extends React.Component<AppProps, AppState> {
         />
         <HeroList message="Vorlagen zur Unternehmensweit standardisierten Beschriftung" items={this.state.listItems}>
           <p className="ms-font-l">
-            Modify the source files, then click <b>Run</b>.
+            Vorlage anklicken zum <b>einfügen</b>.
           </p>
           <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
-            Run
+            Test Vorlage
           </DefaultButton>
         </HeroList>
       </div>
