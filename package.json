@@ -26,12 +26,12 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "@fluentui/react": "^8.52.3",
-    "core-js": "^3.9.1",
+    "@fluentui/react": "^8.112.0",
+    "core-js": "^3.33.0",
     "es6-promise": "^4.2.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
