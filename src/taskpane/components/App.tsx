@@ -32,7 +32,7 @@ export default class App extends React.Component<AppProps, AppState> {
         },
         {
           icon: "Unlock",
-          primaryText: "Befreiung von Unternehmensressourcen",
+          primaryText: "Freigeben von Unternehmensressourcen",
         },
         {
           icon: "Design",
@@ -49,7 +49,7 @@ export default class App extends React.Component<AppProps, AppState> {
        */
 
       // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
+      const paragraph = context.document.body.insertParagraph("Kapselsäcke Konventionell", Word.InsertLocation.end);
 
       // change the paragraph color to blue.
       paragraph.font.color = "blue";
@@ -65,10 +65,10 @@ export default class App extends React.Component<AppProps, AppState> {
        */
 
       // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World 11", Word.InsertLocation.end);
+      const paragraph = context.document.body.insertParagraph("Kapselsäcke - Bio", Word.InsertLocation.end);
 
-      // change the paragraph color to blue.
-      paragraph.font.color = "blue";
+      // change the paragraph color to green.
+      paragraph.font.color = "green";
 
       await context.sync();
     });
@@ -81,7 +81,7 @@ export default class App extends React.Component<AppProps, AppState> {
       return (
         <Progress
           title={title}
-          logo={require("./../../../assets/Nietiet GmbH Logo597.png")}
+          logo={require("./../../../assets/logo-filled.png")}
           message="Initialisierung Fehlgeschlagen - Body leer - sideload?"
         />
       );
@@ -90,20 +90,66 @@ export default class App extends React.Component<AppProps, AppState> {
     return (
       <div className="ms-welcome">
         <Header
-          logo={require("./../../../assets/Nietiet GmbH Logo597.png")}
+          logo={require("./../../../assets/logo-filled.png")}
           title={this.props.title}
           message="Herzlich Willkommen"
         />
-        <HeroList message="Vorlagen zur Unternehmensweiten vereinheitlichung" items={this.state.listItems}>
-          <p className="ms-font-l">
-            Durch <b>anklicken</b> einer Vorlage wird diese geladen und das geöffnete Dokument<b>überschrieben</b>.
+        <HeroList
+          message="Unternehmensweite Standardvorlagen zur Vereinheitlichung und Gleichschaltung"
+          items={this.state.listItems}
+        >
+          <p className=".ms-welcome__anleitung ms-font-s">
+            Durch <b>anklicken</b> einer Vorlage wird diese geladen und das geöffnete Dokument <b>überschrieben</b>.
           </p>
-          <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
-            Test Vorlage
-          </DefaultButton>
-          <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click1}>
-            Test Vorlage 1
-          </DefaultButton>
+          <h2>Produktion - Palettenboxen</h2>
+          <span className="ms-template-list">
+            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+              Kapselsäcke
+            </DefaultButton>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.click1}
+            >
+              Kapselsäcke - Bio
+            </DefaultButton>
+          </span>
+          <h2>Produktion - Kartons</h2>
+          <span className="ms-template-list">
+            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+              Kapseldosen ohne Etikett
+            </DefaultButton>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.click1}
+            >
+              Kapseldosen ohne Etikett - Bio
+            </DefaultButton>
+            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+              Dosen bedruckt
+            </DefaultButton>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.click1}
+            >
+              Dosen bedruckt - Bio
+            </DefaultButton>
+          </span>
+          <h2>Lager - Hochregal</h2>
+          <span className="ms-template-list">
+            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+              Kapseldosen
+            </DefaultButton>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.click1}
+            >
+              Kapseldosen - Bio
+            </DefaultButton>
+          </span>
         </HeroList>
       </div>
     );
