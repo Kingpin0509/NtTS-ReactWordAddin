@@ -57,56 +57,79 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph.font.size = 72;
       // change the paragraph font family to Montserrat.
       paragraph.font.name = "Montserrat ExtraBold";
+      // change the paragraph text align to center.
+      paragraph.alignment = "Centered";
+
       //Paragraph1
-      // insert a empty paragraph at the end of the document. size to 36.
+      // insert a empty paragraph at the end of the document. size to 48. and center.
       const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph1.font.size = 36;
+      paragraph1.font.size = 48;
+      paragraph1.font.name = "Montserrat ExtraBold";
+      paragraph1.alignment = "Centered";
+
       //Paragraph2
-      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat.
+      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
       const paragraph2 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
       paragraph2.font.color = "#000000";
       paragraph2.font.size = 48;
       paragraph2.font.name = "Montserrat ExtraBold";
+      paragraph2.alignment = "Centered";
+
       //Paragraph3
-      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat.
+      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
       const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
       paragraph3.font.color = "#000000";
       paragraph3.font.size = 48;
       paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
+
       //Paragraph4
-      // insert a empty paragraph at the end of the document. size to 36.
+      // insert a empty paragraph at the end of the document. size to 36. and center.
       const paragraph4 = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraph4.font.size = 36;
+      paragraph4.font.name = "Montserrat ExtraBold";
+      paragraph4.alignment = "Centered";
+
       //Paragraph5
       // insert a empty paragraph at the end of the document. size to 36.
-      const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph5.font.size = 36;
+      // const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      // paragraph5.font.size = 36;
+
       //Paragraph6
-      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat.
+      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
       const paragraph6 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
       paragraph6.font.color = "#000000";
       paragraph6.font.size = 48;
       paragraph6.font.name = "Montserrat ExtraBold";
+      paragraph6.alignment = "Centered";
+
       //Paragraph7
-      // insert a empty paragraph at the end of the document. size to 48.
+      // insert a empty paragraph at the end of the document. size to 48. and center.
       const paragraph7 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph7.font.size = 48;
+      paragraph7.font.size = 36;
+      paragraph7.font.name = "Montserrat ExtraBold";
+      paragraph7.alignment = "Centered";
+
       //Paragraph8
       // insert a empty paragraph at the end of the document. size to 48.
-      const paragraph8 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph8.font.size = 48;
+      // const paragraph8 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      // paragraph8.font.size = 48;
+
       //Paragraph9
-      // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat.
+      // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat. and center.
       const paragraph9 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
       paragraph9.font.color = "#000000";
       paragraph9.font.size = 72;
       paragraph9.font.name = "Montserrat ExtraBold";
+      paragraph9.alignment = "Centered";
+
       //Paragraph10
-      // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat.
+      // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat. and center.
       const paragraph10 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
       paragraph10.font.color = "#000000";
       paragraph10.font.size = 72;
       paragraph10.font.name = "Montserrat ExtraBold";
+      paragraph10.alignment = "Centered";
 
       await context.sync();
     });
