@@ -70,11 +70,11 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph1
       // insert a empty paragraph at the end of the document. size to 48. and center.
-      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph1.font.color = "#000000";
-      paragraph1.font.size = 48;
-      paragraph1.font.name = "Montserrat ExtraBold";
-      paragraph1.alignment = "Centered";
+      //const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //paragraph1.font.color = "#000000";
+      //paragraph1.font.size = 28;
+      //paragraph1.font.name = "Montserrat ExtraBold";
+      //paragraph1.alignment = "Centered";
 
       //Paragraph2
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
@@ -88,7 +88,7 @@ export default class App extends React.Component<AppProps, AppState> {
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
       const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
       paragraph3.font.color = "#000000";
-      paragraph3.font.size = 48;
+      paragraph3.font.size = 28;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
 
@@ -166,7 +166,7 @@ export default class App extends React.Component<AppProps, AppState> {
       // insert a empty paragraph at the end of the document. size to 48. and center.
       const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraph1.font.color = "#000000";
-      paragraph1.font.size = 48;
+      paragraph1.font.size = 28;
       paragraph1.font.name = "Montserrat ExtraBold";
       paragraph1.alignment = "Centered";
 
@@ -182,7 +182,7 @@ export default class App extends React.Component<AppProps, AppState> {
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
       const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
       paragraph3.font.color = "#000000";
-      paragraph3.font.size = 48;
+      paragraph3.font.size = 28;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
 
@@ -254,7 +254,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
       const paragraph1 = context.document.body.insertParagraph("Pulver-Kapsel-Dosen", Word.InsertLocation.end);
-      paragraph1.font.size = 36;
+      paragraph1.font.size = 28;
       paragraph1.font.name = "Montserrat ExtraBold";
       paragraph1.alignment = "Centered";
       const paragraph2 = context.document.body.insertParagraph("ohne Etikett", Word.InsertLocation.end);
@@ -262,7 +262,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph2.font.name = "Montserrat ExtraBold";
       paragraph2.alignment = "Centered";
       const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph3.font.size = 48;
+      paragraph3.font.size = 36;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
       const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
@@ -270,7 +270,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
       const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph5.font.size = 72;
+      paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
       const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
@@ -297,7 +297,7 @@ export default class App extends React.Component<AppProps, AppState> {
       //Paragraphen - Dosen ohne Etikett
       const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraph00.font.color = "#000000";
-      paragraph00.font.size = 36;
+      paragraph00.font.size = 28;
       paragraph00.font.name = "Montserrat ExtraBold";
       paragraph00.alignment = "Centered";
       const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
@@ -305,7 +305,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
       const paragraph1 = context.document.body.insertParagraph("Pulver-Kapsel-Dosen", Word.InsertLocation.end);
-      paragraph1.font.size = 36;
+      paragraph1.font.size = 28;
       paragraph1.font.name = "Montserrat ExtraBold";
       paragraph1.alignment = "Centered";
       const paragraph2 = context.document.body.insertParagraph("ohne Etikett", Word.InsertLocation.end);
@@ -313,7 +313,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph2.font.name = "Montserrat ExtraBold";
       paragraph2.alignment = "Centered";
       const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph3.font.size = 48;
+      paragraph3.font.size = 36;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
       const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
@@ -321,7 +321,58 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
       const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph5.font.size = 72;
+      paragraph5.font.size = 48;
+      paragraph5.font.name = "Montserrat ExtraBold";
+      paragraph5.alignment = "Centered";
+      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      paragraph6.font.size = 72;
+      paragraph6.font.name = "Montserrat ExtraBold";
+      paragraph6.alignment = "Centered";
+      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph7.font.size = 72;
+      paragraph7.font.name = "Montserrat ExtraBold";
+      paragraph7.alignment = "Centered";
+      await context.sync();
+    });
+  };
+
+  //Dosen Bedruckt
+  clickDosenbedruckt = async () => {
+    return Word.run(async (context) => {
+      //Paragraph Leer - ohne BIO Kennzeichnung
+      const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraphBio.font.color = "#BED200";
+      paragraphBio.font.size = 72;
+      paragraphBio.font.name = "Montserrat ExtraBold";
+      paragraphBio.alignment = "Centered";
+      //Paragraphen - Dosen Bedruckt
+      //const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //paragraph00.font.size = 36;
+      //paragraph00.font.name = "Montserrat ExtraBold";
+      //paragraph00.alignment = "Centered";
+      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.color = "#000000";
+      paragraph0.font.size = 48;
+      paragraph0.font.name = "Montserrat ExtraBold";
+      paragraph0.alignment = "Centered";
+      //  const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //  paragraph1.font.size = 48;
+      //  paragraph1.font.name = "Montserrat ExtraBold";
+      //  paragraph1.alignment = "Centered";
+      const paragraph2 = context.document.body.insertParagraph("Dosen - Bedruckt", Word.InsertLocation.end);
+      paragraph2.font.size = 36;
+      paragraph2.font.name = "Montserrat ExtraBold";
+      paragraph2.alignment = "Centered";
+      const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph3.font.size = 36;
+      paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
+      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      paragraph4.font.size = 48;
+      paragraph4.font.name = "Montserrat ExtraBold";
+      paragraph4.alignment = "Centered";
+      const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
       const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
@@ -387,8 +438,8 @@ export default class App extends React.Component<AppProps, AppState> {
     });
   };
 
-  //Dosen Bedruckt
-  clickDosenbedruckt = async () => {
+  //Hochregal Paletten
+  clickHochregal = async () => {
     return Word.run(async (context) => {
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
@@ -396,41 +447,45 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraphBio.font.size = 72;
       paragraphBio.font.name = "Montserrat ExtraBold";
       paragraphBio.alignment = "Centered";
-      //Paragraphen - Dosen Bedruckt
-      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph00.font.color = "#000000";
-      paragraph00.font.size = 36;
-      paragraph00.font.name = "Montserrat ExtraBold";
-      paragraph00.alignment = "Centered";
+      //Paragraphen - Hochregal Palette
+      //const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //paragraph00.font.color = "#000000";
+      //paragraph00.font.size = 36;
+      //paragraph00.font.name = "Montserrat ExtraBold";
+      //paragraph00.alignment = "Centered";
       const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.color = "#000000";
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
-      //  const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      //  paragraph1.font.size = 48;
-      //  paragraph1.font.name = "Montserrat ExtraBold";
-      //  paragraph1.alignment = "Centered";
-      const paragraph2 = context.document.body.insertParagraph("Dosen - Bedruckt", Word.InsertLocation.end);
+      //const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //paragraph1.font.size = 36;
+      //paragraph1.font.name = "Montserrat ExtraBold";
+      //paragraph1.alignment = "Centered";
+      const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
       paragraph2.font.size = 36;
       paragraph2.font.name = "Montserrat ExtraBold";
       paragraph2.alignment = "Centered";
       const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph3.font.size = 36;
+      paragraph3.font.size = 28;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
-      paragraph4.font.size = 48;
+      const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      paragraph4.font.color = "#000000";
+      paragraph4.font.size = 72;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
-      const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph5.font.color = "#000000";
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
-      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
-      paragraph6.font.size = 72;
+      const paragraph6 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph6.font.size = 26;
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
-      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph7 = context.document.body.insertParagraph("0000 Dosen", Word.InsertLocation.end);
+      paragraph7.font.color = "#000000";
       paragraph7.font.size = 72;
       paragraph7.font.name = "Montserrat ExtraBold";
       paragraph7.alignment = "Centered";
@@ -448,12 +503,12 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph.font.name = "Montserrat ExtraBold";
       paragraph.alignment = "Centered";
       //Paragraphen - Hochregal Palette
-      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph00.font.color = "#000000";
-      paragraph00.font.size = 36;
-      paragraph00.font.name = "Montserrat ExtraBold";
-      paragraph00.alignment = "Centered";
+      //const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //paragraph00.font.size = 36;
+      //paragraph00.font.name = "Montserrat ExtraBold";
+      //paragraph00.alignment = "Centered";
       const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.color = "#000000";
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
@@ -462,11 +517,11 @@ export default class App extends React.Component<AppProps, AppState> {
       //      paragraph1.font.name = "Montserrat ExtraBold";
       //      paragraph1.alignment = "Centered";
       const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
-      paragraph2.font.size = 48;
+      paragraph2.font.size = 36;
       paragraph2.font.name = "Montserrat ExtraBold";
       paragraph2.alignment = "Centered";
       const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph3.font.size = 72;
+      paragraph3.font.size = 28;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
       const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
@@ -476,65 +531,11 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph4.alignment = "Centered";
       const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
       paragraph5.font.color = "#000000";
-      paragraph5.font.size = 48;
+      paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
       const paragraph6 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph6.font.size = 36;
-      paragraph6.font.name = "Montserrat ExtraBold";
-      paragraph6.alignment = "Centered";
-      const paragraph7 = context.document.body.insertParagraph("0000 Dosen", Word.InsertLocation.end);
-      paragraph7.font.color = "#000000";
-      paragraph7.font.size = 72;
-      paragraph7.font.name = "Montserrat ExtraBold";
-      paragraph7.alignment = "Centered";
-      await context.sync();
-    });
-  };
-
-  //Hochregal Paletten
-  clickHochregal = async () => {
-    return Word.run(async (context) => {
-      //Paragraph Leer - ohne BIO Kennzeichnung
-      const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraphBio.font.color = "#BED200";
-      paragraphBio.font.size = 72;
-      paragraphBio.font.name = "Montserrat ExtraBold";
-      paragraphBio.alignment = "Centered";
-      //Paragraphen - Hochregal Palette
-      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph00.font.color = "#000000";
-      paragraph00.font.size = 36;
-      paragraph00.font.name = "Montserrat ExtraBold";
-      paragraph00.alignment = "Centered";
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
-      paragraph0.font.size = 48;
-      paragraph0.font.name = "Montserrat ExtraBold";
-      paragraph0.alignment = "Centered";
-      //const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      //paragraph1.font.size = 36;
-      //paragraph1.font.name = "Montserrat ExtraBold";
-      //paragraph1.alignment = "Centered";
-      const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
-      paragraph2.font.size = 48;
-      paragraph2.font.name = "Montserrat ExtraBold";
-      paragraph2.alignment = "Centered";
-      const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph3.font.size = 72;
-      paragraph3.font.name = "Montserrat ExtraBold";
-      paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
-      paragraph4.font.color = "#000000";
-      paragraph4.font.size = 72;
-      paragraph4.font.name = "Montserrat ExtraBold";
-      paragraph4.alignment = "Centered";
-      const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
-      paragraph5.font.color = "#000000";
-      paragraph5.font.size = 48;
-      paragraph5.font.name = "Montserrat ExtraBold";
-      paragraph5.alignment = "Centered";
-      const paragraph6 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph6.font.size = 36;
+      paragraph6.font.size = 28;
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
       const paragraph7 = context.document.body.insertParagraph("0000 Dosen", Word.InsertLocation.end);
