@@ -291,7 +291,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraphBio.font.size = 72;
       paragraphBio.font.name = "Montserrat ExtraBold";
       paragraphBio.alignment = "Centered";
-      //Paragraphen - Bio - Dosen ohne Etikett
+      //Paragraphen - Dosen ohne Etikett
       const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraph00.font.size = 36;
       paragraph00.font.name = "Montserrat ExtraBold";
@@ -325,6 +325,212 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
       const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph7.font.size = 72;
+      paragraph7.font.name = "Montserrat ExtraBold";
+      paragraph7.alignment = "Centered";
+      await context.sync();
+    });
+  };
+
+  //Bio - Dosen Bedruckt
+  clickBioDosenbedruckt = async () => {
+    return Word.run(async (context) => {
+      //Paragraph - BIO Kennzeichnung
+      const paragraphBio = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
+      paragraphBio.font.color = "#BED200";
+      paragraphBio.font.size = 72;
+      paragraphBio.font.name = "Montserrat ExtraBold";
+      paragraphBio.alignment = "Centered";
+      //Paragraphen - Dosen Bedruckt
+      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph00.font.size = 36;
+      paragraph00.font.name = "Montserrat ExtraBold";
+      paragraph00.alignment = "Centered";
+      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.size = 48;
+      paragraph0.font.name = "Montserrat ExtraBold";
+      paragraph0.alignment = "Centered";
+      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph1.font.size = 48;
+      paragraph1.font.name = "Montserrat ExtraBold";
+      paragraph1.alignment = "Centered";
+      const paragraph2 = context.document.body.insertParagraph("Dosen - Bedruckt", Word.InsertLocation.end);
+      paragraph2.font.size = 36;
+      paragraph2.font.name = "Montserrat ExtraBold";
+      paragraph2.alignment = "Centered";
+      const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph3.font.size = 72;
+      paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
+      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      paragraph4.font.size = 48;
+      paragraph4.font.name = "Montserrat ExtraBold";
+      paragraph4.alignment = "Centered";
+      const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph5.font.size = 72;
+      paragraph5.font.name = "Montserrat ExtraBold";
+      paragraph5.alignment = "Centered";
+      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      paragraph6.font.size = 72;
+      paragraph6.font.name = "Montserrat ExtraBold";
+      paragraph6.alignment = "Centered";
+      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph7.font.size = 72;
+      paragraph7.font.name = "Montserrat ExtraBold";
+      paragraph7.alignment = "Centered";
+      await context.sync();
+    });
+  };
+
+  //Dosen Bedruckt
+  clickDosenbedruckt = async () => {
+    return Word.run(async (context) => {
+      //Paragraph Leer - ohne BIO Kennzeichnung
+      const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraphBio.font.color = "#BED200";
+      paragraphBio.font.size = 72;
+      paragraphBio.font.name = "Montserrat ExtraBold";
+      paragraphBio.alignment = "Centered";
+      //Paragraphen - Dosen Bedruckt
+      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph00.font.size = 36;
+      paragraph00.font.name = "Montserrat ExtraBold";
+      paragraph00.alignment = "Centered";
+      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.size = 48;
+      paragraph0.font.name = "Montserrat ExtraBold";
+      paragraph0.alignment = "Centered";
+      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph1.font.size = 48;
+      paragraph1.font.name = "Montserrat ExtraBold";
+      paragraph1.alignment = "Centered";
+      const paragraph2 = context.document.body.insertParagraph("Dosen - Bedruckt", Word.InsertLocation.end);
+      paragraph2.font.size = 36;
+      paragraph2.font.name = "Montserrat ExtraBold";
+      paragraph2.alignment = "Centered";
+      const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph3.font.size = 72;
+      paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
+      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      paragraph4.font.size = 48;
+      paragraph4.font.name = "Montserrat ExtraBold";
+      paragraph4.alignment = "Centered";
+      const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph5.font.size = 72;
+      paragraph5.font.name = "Montserrat ExtraBold";
+      paragraph5.alignment = "Centered";
+      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      paragraph6.font.size = 72;
+      paragraph6.font.name = "Montserrat ExtraBold";
+      paragraph6.alignment = "Centered";
+      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph7.font.size = 72;
+      paragraph7.font.name = "Montserrat ExtraBold";
+      paragraph7.alignment = "Centered";
+      await context.sync();
+    });
+  };
+
+  //Hochregal Bio Paletten
+  clickBioHochregal = async () => {
+    return Word.run(async (context) => {
+      //Paragraph - BIO Kennzeichnung
+      const paragraph = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
+      paragraph.font.color = "#BED200";
+      paragraph.font.size = 72;
+      paragraph.font.name = "Montserrat ExtraBold";
+      paragraph.alignment = "Centered";
+      //Paragraphen - Hochregal Palette
+      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph00.font.size = 36;
+      paragraph00.font.name = "Montserrat ExtraBold";
+      paragraph00.alignment = "Centered";
+      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.size = 48;
+      paragraph0.font.name = "Montserrat ExtraBold";
+      paragraph0.alignment = "Centered";
+      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph1.font.size = 36;
+      paragraph1.font.name = "Montserrat ExtraBold";
+      paragraph1.alignment = "Centered";
+      const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      paragraph2.font.size = 48;
+      paragraph2.font.name = "Montserrat ExtraBold";
+      paragraph2.alignment = "Centered";
+      const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph3.font.size = 72;
+      paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
+      const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      paragraph4.font.color = "#000000";
+      paragraph4.font.size = 72;
+      paragraph4.font.name = "Montserrat ExtraBold";
+      paragraph4.alignment = "Centered";
+      const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph5.font.color = "#000000";
+      paragraph5.font.size = 48;
+      paragraph5.font.name = "Montserrat ExtraBold";
+      paragraph5.alignment = "Centered";
+      const paragraph6 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph6.font.size = 36;
+      paragraph6.font.name = "Montserrat ExtraBold";
+      paragraph6.alignment = "Centered";
+      const paragraph7 = context.document.body.insertParagraph("0000 Dosen", Word.InsertLocation.end);
+      paragraph7.font.color = "#000000";
+      paragraph7.font.size = 72;
+      paragraph7.font.name = "Montserrat ExtraBold";
+      paragraph7.alignment = "Centered";
+      await context.sync();
+    });
+  };
+
+  //Hochregal Paletten
+  clickHochregal = async () => {
+    return Word.run(async (context) => {
+      //Paragraph Leer - ohne BIO Kennzeichnung
+      const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraphBio.font.color = "#BED200";
+      paragraphBio.font.size = 72;
+      paragraphBio.font.name = "Montserrat ExtraBold";
+      paragraphBio.alignment = "Centered";
+      //Paragraphen - Hochregal Palette
+      const paragraph00 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph00.font.size = 36;
+      paragraph00.font.name = "Montserrat ExtraBold";
+      paragraph00.alignment = "Centered";
+      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      paragraph0.font.size = 48;
+      paragraph0.font.name = "Montserrat ExtraBold";
+      paragraph0.alignment = "Centered";
+      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph1.font.size = 36;
+      paragraph1.font.name = "Montserrat ExtraBold";
+      paragraph1.alignment = "Centered";
+      const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      paragraph2.font.size = 48;
+      paragraph2.font.name = "Montserrat ExtraBold";
+      paragraph2.alignment = "Centered";
+      const paragraph3 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph3.font.size = 72;
+      paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
+      const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      paragraph4.font.color = "#000000";
+      paragraph4.font.size = 72;
+      paragraph4.font.name = "Montserrat ExtraBold";
+      paragraph4.alignment = "Centered";
+      const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      paragraph5.font.color = "#000000";
+      paragraph5.font.size = 48;
+      paragraph5.font.name = "Montserrat ExtraBold";
+      paragraph5.alignment = "Centered";
+      const paragraph6 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      paragraph6.font.size = 36;
+      paragraph6.font.name = "Montserrat ExtraBold";
+      paragraph6.alignment = "Centered";
+      const paragraph7 = context.document.body.insertParagraph("0000 Dosen", Word.InsertLocation.end);
+      paragraph7.font.color = "#000000";
       paragraph7.font.size = 72;
       paragraph7.font.name = "Montserrat ExtraBold";
       paragraph7.alignment = "Centered";
@@ -392,19 +598,35 @@ export default class App extends React.Component<AppProps, AppState> {
             >
               Kapseldosen ohne Etikett - Bio
             </DefaultButton>
-            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.clickDosenbedruckt}
+            >
               Dosen bedruckt
             </DefaultButton>
-            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.clickBioDosenbedruckt}
+            >
               Dosen bedruckt - Bio
             </DefaultButton>
           </span>
           <h2>Lager - Hochregal</h2>
           <span className="ms-template-list">
-            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.clickBioHochregal}
+            >
               Kapseldosen
             </DefaultButton>
-            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.clickHochregal}
+            >
               Kapseldosen - Bio
             </DefaultButton>
           </span>
