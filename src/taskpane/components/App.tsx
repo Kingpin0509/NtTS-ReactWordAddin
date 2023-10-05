@@ -565,24 +565,27 @@ export default class App extends React.Component<AppProps, AppState> {
           <p className=".ms-welcome__anleitung ms-font-s">
             Durch <b>anklicken</b> einer Vorlage wird diese in das geöffnete Dokument <b>eingefügt</b>.
           </p>
-          <h2>Produktion - Palettenboxen</h2>
+          <br></br>
+          <h2>Produktion</h2>
+          <h3>Palettenboxen mit:</h3>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"
               iconProps={{ iconName: "ChevronRight" }}
               onClick={this.clickKapseln}
             >
-              Kapselsäcke
+              Kapselsäcken
             </DefaultButton>
             <DefaultButton
               className="ms-welcome__action"
               iconProps={{ iconName: "ChevronRight" }}
               onClick={this.clickBioKapseln}
             >
-              Kapselsäcke - Bio
+              Kapselsäcken - Bio
             </DefaultButton>
           </span>
-          <h2>Produktion - Kartons</h2>
+          <h2>Produktionsvorbereitung</h2>
+          <h3>Kartons mit:</h3>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"
@@ -613,21 +616,22 @@ export default class App extends React.Component<AppProps, AppState> {
               Dosen bedruckt - Bio
             </DefaultButton>
           </span>
-          <h2>Lager - Hochregal</h2>
+          <h2>Produktionsabschluss</h2>
+          <h3>Hochregalpallette mit:</h3>
           <span className="ms-template-list">
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
-              onClick={this.clickBioHochregal}
-            >
-              Kapseldosen
-            </DefaultButton>
             <DefaultButton
               className="ms-welcome__action"
               iconProps={{ iconName: "ChevronRight" }}
               onClick={this.clickHochregal}
             >
-              Kapseldosen - Bio
+              Dosenprodukte
+            </DefaultButton>
+            <DefaultButton
+              className="ms-welcome__action"
+              iconProps={{ iconName: "ChevronRight" }}
+              onClick={this.clickBioHochregal}
+            >
+              Bio Dosenprodukte
             </DefaultButton>
           </span>
         </HeroList>
