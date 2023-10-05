@@ -574,8 +574,8 @@ export default class App extends React.Component<AppProps, AppState> {
             Durch <b>anklicken</b> einer Vorlage wird diese in das geöffnete Dokument <b>eingefügt</b>.
           </p>
           <br></br>
-          <h2>Produktion</h2>
-          <h3>Palettenboxen mit:</h3>
+          <h3>Produktion</h3>
+          <h4>Palettenboxen mit:</h4>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"
@@ -592,8 +592,8 @@ export default class App extends React.Component<AppProps, AppState> {
               Kapselsäcken - Bio
             </DefaultButton>
           </span>
-          <h2>Produktionsvorbereitung</h2>
-          <h3>Kartons mit:</h3>
+          <h3>Produktionsvorbereitung</h3>
+          <h4>Kartons mit:</h4>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"
@@ -624,8 +624,8 @@ export default class App extends React.Component<AppProps, AppState> {
               Dosen bedruckt - Bio
             </DefaultButton>
           </span>
-          <h2>Produktionsabschluss</h2>
-          <h3>Hochregalpallette mit:</h3>
+          <h3>Produktionsabschluss</h3>
+          <h4>Hochregalpallette mit:</h4>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"
