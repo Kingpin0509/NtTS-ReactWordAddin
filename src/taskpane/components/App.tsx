@@ -572,7 +572,7 @@ export default class App extends React.Component<AppProps, AppState> {
           items={this.state.listItems}
         >
           <p className=".ms-welcome__anleitung ms-font-s">
-            Durch <b>anklicken</b> einer Vorlage wird diese in das geöffnete Dokument <b>eingefügt</b>.
+            <b>Klick</b> auf eine Vorlage um diese in das Dokument <b>einzufügen</b>.
           </p>
           <br></br>
           <h3>Produktion</h3>
@@ -625,7 +625,7 @@ export default class App extends React.Component<AppProps, AppState> {
               Dosen bedruckt - Bio
             </DefaultButton>
           </span>
-          <h3>Produktionsabschluss</h3>
+          <h3>Lagerung</h3>
           <h4>Hochregalpallette mit:</h4>
           <span className="ms-template-list">
             <DefaultButton
