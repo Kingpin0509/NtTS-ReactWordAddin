@@ -61,10 +61,12 @@ export default class App extends React.Component<AppProps, AppState> {
   //Palettenboxen mit Kapselsäcken
   clickKapseln = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
+
       /**
        * Insert Word code here
        */
-
       //Paragraph0
       // insert a paragraph at the start of the document.
       const paragraph = context.document.body.insertParagraph("", Word.InsertLocation.end);
@@ -263,7 +265,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
       const paragraph1 = context.document.body.insertParagraph("Pulver-Kapsel-Dosen", Word.InsertLocation.end);
-      paragraph1.font.size = 28;
+      paragraph1.font.size = 20;
       paragraph1.font.name = "Montserrat ExtraBold";
       paragraph1.alignment = "Centered";
       const paragraph2 = context.document.body.insertParagraph("ohne Etikett", Word.InsertLocation.end);
@@ -314,7 +316,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
       const paragraph1 = context.document.body.insertParagraph("Pulver-Kapsel-Dosen", Word.InsertLocation.end);
-      paragraph1.font.size = 28;
+      paragraph1.font.size = 20;
       paragraph1.font.name = "Montserrat ExtraBold";
       paragraph1.alignment = "Centered";
       const paragraph2 = context.document.body.insertParagraph("ohne Etikett", Word.InsertLocation.end);
@@ -330,7 +332,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
       const paragraph5 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph5.font.size = 48;
+      paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
       const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
