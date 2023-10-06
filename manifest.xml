@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>2c432697-1a55-46d0-a469-010e7722960f</Id>
-  <Version>1.0.98.0</Version>
+  <Version>2.0.0.0</Version>
   <ProviderName>Michael Humann</ProviderName>
   <DefaultLocale>de-De</DefaultLocale>
   <DisplayName DefaultValue="Vorlagenbrowser - Nietiet GmbH"/>

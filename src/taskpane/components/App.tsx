@@ -3,7 +3,16 @@ import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList, { HeroListItem } from "./HeroList";
 import Progress from "./Progress";
-
+import { Image, IImageProps, ImageFit } from "@fluentui/react/lib/Image";
+// These props are defined up here so they can easily be applied to multiple Images.
+// Normally specifying them inline would be fine.
+const imageProps: IImageProps = {
+  imageFit: ImageFit.cover,
+  //width: 150,
+  height: 350,
+  // Show a border around the image (just for demonstration purposes)
+  styles: (props) => ({ root: { border: "1px solid " + props.theme.palette.neutralSecondary } }),
+};
 /* global Word, require */
 
 export interface AppProps {
@@ -575,26 +584,25 @@ export default class App extends React.Component<AppProps, AppState> {
             <b>Klick</b> auf eine Vorlage um diese in das Dokument <b>einzufügen</b>.
           </p>
           <br></br>
-          <h3>Produktion</h3>
-          <h4>Palettenboxen mit:</h4>
+          <h4>In der Produktion</h4>
+          <h3>Palettenbox mit Kapselsäcken</h3>
           <span className="ms-template-list">
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickKapseln}
-            >
-              Kapselsäcken
-            </DefaultButton>
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+              {...imageProps}
+              src="./../../../assets/kapselscke.png"
+              alt="Palettenbox mit Kapselscken"
+            ></Image>
+            <Image
+              className="ms-welcome__imageaction"
+              {...imageProps}
+              src="./../../../assets/kapselsckebio.png"
+              alt="Palettenbox mit Kapselscken - Bio"
               onClick={this.clickBioKapseln}
-            >
-              Kapselsäcken - Bio
-            </DefaultButton>
+            ></Image>
           </span>
-          <h3>Produktionsvorbereitung</h3>
-          <h4>Kartons mit:</h4>
+          <h3>Kartons mit:</h3>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"
@@ -625,8 +633,8 @@ export default class App extends React.Component<AppProps, AppState> {
               Dosen bedruckt - Bio
             </DefaultButton>
           </span>
-          <h3>Lagerung</h3>
-          <h4>Hochregalpallette mit:</h4>
+          <h4>Lager</h4>
+          <h3>Hochregalpallette mit:</h3>
           <span className="ms-template-list">
             <DefaultButton
               className="ms-welcome__action"

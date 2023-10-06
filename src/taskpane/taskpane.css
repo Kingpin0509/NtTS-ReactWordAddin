@@ -52,7 +52,17 @@ ul {
   text-align: center;
   font-size: 14px;
 }
-
+.ms-welcome__main > h3 {
+  margin: 0 0;
+  width: 100%;
+  text-align: center;
+ }
+.ms-welcome__main > h4 {
+  margin: 0 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
 p.\.ms-welcome__anleitung.ms-font-s {
   margin: 35px 5px 0 5px;
 }
@@ -86,7 +96,11 @@ p.\.ms-welcome__anleitung.ms-font-s {
   margin: 1px;
   font-size: 12;
 }
+.ms-welcome__imageaction {
+  margin: 1px;
 
+  cursor: pointer;
+}
 .ms-welcome__action.ms-Button--hero {
   margin-top: 30px;
 }
