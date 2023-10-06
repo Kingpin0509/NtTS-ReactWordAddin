@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DefaultButton } from "@fluentui/react";
+//import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList, { HeroListItem } from "./HeroList";
 import Progress from "./Progress";
@@ -596,60 +596,61 @@ export default class App extends React.Component<AppProps, AppState> {
             ></Image>
             <Image
               className="ms-welcome__imageaction"
+              onClick={this.clickBioKapseln}
               {...imageProps}
               src="./../../../assets/kapselsckebio.png"
               alt="Palettenbox mit Kapselscken - Bio"
-              onClick={this.clickBioKapseln}
             ></Image>
           </span>
           <h3>Kartons mit:</h3>
           <span className="ms-template-list">
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickDosenohEtt}
-            >
-              Kapseldosen ohne Etikett
-            </DefaultButton>
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+              {...imageProps}
+              src="./../../../assets/KapseldosenohneEtikett.png"
+              alt="Kapseldosen ohne Etikett"
+            ></Image>
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickBioDosenohEtt}
-            >
-              Kapseldosen ohne Etikett - Bio
-            </DefaultButton>
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+              {...imageProps}
+              src="./../../../assets/KapseldosenohneEtikettBio.png"
+              alt="Kapseldosen ohne Etikett - Bio"
+            ></Image>
+
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickDosenbedruckt}
-            >
-              Dosen bedruckt
-            </DefaultButton>
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+              {...imageProps}
+              src="./../../../assets/Dosenbedruckt.png"
+              alt="Dosen bedruckt"
+            ></Image>
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickBioDosenbedruckt}
-            >
-              Dosen bedruckt - Bio
-            </DefaultButton>
+              {...imageProps}
+              src="./../../../assets/DosenbedrucktBio.png"
+              alt="Dosen bedruckt - Bio"
+            ></Image>
           </span>
           <h4>Lager</h4>
-          <h3>Hochregalpallette mit:</h3>
+          <h3>Hochregal - Palette</h3>
           <span className="ms-template-list">
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickHochregal}
-            >
-              Dosenprodukte
-            </DefaultButton>
-            <DefaultButton
-              className="ms-welcome__action"
-              iconProps={{ iconName: "ChevronRight" }}
+              {...imageProps}
+              src="./../../../assets/HLVerdoselteWare.png"
+              alt="Verdoselte Ware"
+            ></Image>
+            <Image
+              className="ms-welcome__imageaction"
               onClick={this.clickBioHochregal}
-            >
-              Bio Dosenprodukte
-            </DefaultButton>
+              {...imageProps}
+              src="./../../../assets/HLVerdoselteWareBio.png"
+              alt="Verdoselte Bio Ware"
+            ></Image>
           </span>
         </HeroList>
       </div>
