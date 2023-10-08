@@ -582,7 +582,7 @@ export default class App extends React.Component<AppProps, AppState> {
           message="Unternehmensweite Standardvorlagen zur Vereinheitlichung und Gleichschaltung"
           items={this.state.listItems}
         >
-          <p className=".ms-welcome__anleitung ms-font-s">
+          <p className="ms-welcome__anleitung ms-font-s">
             <b>Klick</b> auf eine Vorlage um diese in das Dokument <b>einzufügen</b>.
           </p>
           <br></br>
