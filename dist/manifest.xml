@@ -30,7 +30,7 @@
           </GetStarted>
           <FunctionFile resid="Commands.Url"/>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <OfficeTab id="TabHome">
+            <OfficeTab id="Tab1">
               <Group id="CommandsGroup">
                 <Label resid="CommandsGroup.Label"/>
                 <Icon>
@@ -73,6 +73,8 @@
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Nietiet GmbH - Word Vorlagenbrowser!"/>
+        <bt:String id="Tab1" DefaultValue="Nietiet GmbH"/>
+        <bt:String id="Tab1.Label" DefaultValue="Nietiet GmbH"/>
         <bt:String id="CommandsGroup.Label" DefaultValue="Nietiet GmbH"/>
         <bt:String id="TaskpaneButton.Label" DefaultValue="Vorlagen"/>
       </bt:ShortStrings>
