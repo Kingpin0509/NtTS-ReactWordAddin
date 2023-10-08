@@ -596,11 +596,11 @@ export default class App extends React.Component<AppProps, AppState> {
           message="Herzlich Willkommen"
         />
         <HeroList
-          message="Unternehmensweite Standardvorlagen zur Vereinheitlichung und Gleichschaltung"
+          message="One-Klick A4 Standardvorlagen"
           items={this.state.listItems}
         >
           <p className="ms-welcome__anleitung ms-font-s">
-            <b>Klick</b> auf eine Vorlage um diese in das Dokument <b>einzufügen</b>.
+            <b>Klicke</b> auf eine Vorlage um sie zu <b>laden</b>.
           </p>
           <br></br>
           <h2>Produktion</h2>

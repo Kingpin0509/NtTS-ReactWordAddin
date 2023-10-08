@@ -18,7 +18,7 @@ export default class HeroList extends React.Component<HeroListProps> {
     const listItems = items.map((item, index) => (
       <li className="ms-ListItem" key={index}>
         <i className={`ms-Icon ms-Icon--${item.icon}`}></i>
-        <span className="ms-Text ms-font-m ms-fontColor-neutralPrimary">{item.primaryText}</span>
+        <span className="ms-Text ms-fontColor-neutralPrimary">{item.primaryText}</span>
       </li>
     ));
     return (
