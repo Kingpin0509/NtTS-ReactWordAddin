@@ -586,7 +586,7 @@ export default class App extends React.Component<AppProps, AppState> {
             <b>Klick</b> auf eine Vorlage um diese in das Dokument <b>einzufügen</b>.
           </p>
           <br></br>
-          <h4>Produktion</h4>
+          <h2>Produktion</h2>
           <h3>Palettenboxen</h3>
           <span className="ms-template-list">
             <Image
@@ -605,43 +605,41 @@ export default class App extends React.Component<AppProps, AppState> {
             ></Image>
           </span>
           <h3>Kartons</h3>
+          <h4>Kapseldosen ohne Etikett</h4>
           <span className="ms-template-list">
-            <h4>Kapseldosen ohne Etikett</h4>
-            <span>
-              <Image
-                className="ms-welcome__imageaction"
-                onClick={this.clickDosenohEtt}
-                {...imageProps}
-                src="./../../../assets/KapseldosenohneEtikett.png"
-                alt="Kapseldosen ohne Etikett"
-              ></Image>
-              <Image
-                className="ms-welcome__imageaction"
-                onClick={this.clickBioDosenohEtt}
-                {...imageProps}
-                src="./../../../assets/KapseldosenohneEtikettBio.png"
-                alt="Kapseldosen ohne Etikett - Bio"
-              ></Image>
-            </span>
-            <h4>Dosen bedruckt</h4>
-            <span>
-              <Image
-                className="ms-welcome__imageaction"
-                onClick={this.clickDosenbedruckt}
-                {...imageProps}
-                src="./../../../assets/Dosenbedruckt.png"
-                alt="Dosen bedruckt"
-              ></Image>
-              <Image
-                className="ms-welcome__imageaction"
-                onClick={this.clickBioDosenbedruckt}
-                {...imageProps}
-                src="./../../../assets/DosenbedrucktBio.png"
-                alt="Dosen bedruckt - Bio"
-              ></Image>
-            </span>
+            <Image
+              className="ms-welcome__imageaction"
+              onClick={this.clickDosenohEtt}
+              {...imageProps}
+              src="./../../../assets/KapseldosenohneEtikett.png"
+              alt="Kapseldosen ohne Etikett"
+            ></Image>
+            <Image
+              className="ms-welcome__imageaction"
+              onClick={this.clickBioDosenohEtt}
+              {...imageProps}
+              src="./../../../assets/KapseldosenohneEtikettBio.png"
+              alt="Kapseldosen ohne Etikett - Bio"
+            ></Image>
           </span>
-          <h4>Lager</h4>
+          <h4>Dosen bedruckt</h4>
+          <span className="ms-template-list">
+            <Image
+              className="ms-welcome__imageaction"
+              onClick={this.clickDosenbedruckt}
+              {...imageProps}
+              src="./../../../assets/Dosenbedruckt.png"
+              alt="Dosen bedruckt"
+            ></Image>
+            <Image
+              className="ms-welcome__imageaction"
+              onClick={this.clickBioDosenbedruckt}
+              {...imageProps}
+              src="./../../../assets/DosenbedrucktBio.png"
+              alt="Dosen bedruckt - Bio"
+            ></Image>
+          </span>
+          <h2>Lager</h2>
           <h3>Hochregal - Palette</h3>
           <span className="ms-template-list">
             <Image
