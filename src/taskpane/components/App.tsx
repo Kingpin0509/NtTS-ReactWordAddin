@@ -63,7 +63,6 @@ export default class App extends React.Component<AppProps, AppState> {
     return Word.run(async (context) => {
       context.document.body.clear();
       await context.sync();
-
       /**
        * Insert Word code here
        */
@@ -157,9 +156,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Palettenboxen mit BIO Kapselsäcken
   clickBioKapseln = async () => {
     return Word.run(async (context) => {
-      /**
-       *  Word code here
-       */
+      context.document.body.clear();
+      await context.sync();
 
       //Paragraph0
       // insert a paragraph at the start of the document.
@@ -252,6 +250,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Dosen ohne Etikett
   clickDosenohEtt = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraph = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraph.font.color = "#BED200";
@@ -299,6 +299,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Bio - Dosen ohne Etikett
   clickBioDosenohEtt = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       //Paragraph - BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
       paragraphBio.font.color = "#BED200";
@@ -350,6 +352,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Dosen Bedruckt
   clickDosenbedruckt = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraphBio.font.color = "#BED200";
@@ -401,6 +405,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Bio - Dosen Bedruckt
   clickBioDosenbedruckt = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       //Paragraph - BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
       paragraphBio.font.color = "#BED200";
@@ -452,6 +458,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Hochregal Paletten
   clickHochregal = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
       paragraphBio.font.color = "#BED200";
@@ -507,6 +515,8 @@ export default class App extends React.Component<AppProps, AppState> {
   //Hochregal Bio Paletten
   clickBioHochregal = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       //Paragraph - BIO Kennzeichnung
       const paragraph = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
       paragraph.font.color = "#BED200";
@@ -523,10 +533,10 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
-      //      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      //      paragraph1.font.size = 36;
-      //      paragraph1.font.name = "Montserrat ExtraBold";
-      //      paragraph1.alignment = "Centered";
+      //const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      //paragraph1.font.size = 36;
+      //paragraph1.font.name = "Montserrat ExtraBold";
+      //paragraph1.alignment = "Centered";
       const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
       paragraph2.font.size = 36;
       paragraph2.font.name = "Montserrat ExtraBold";
