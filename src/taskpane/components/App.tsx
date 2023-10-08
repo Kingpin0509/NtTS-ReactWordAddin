@@ -62,6 +62,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickKapseln = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       /**
        * Insert Word code here
@@ -79,7 +80,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph.alignment = "Centered";
 
       //Paragraph1
-      // insert a empty paragraph at the end of the document. size to 48. and center.
+      // insert a empty paragraph at the end of the document. size to 28. and center.
       //const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
       //paragraph1.font.color = "#000000";
       //paragraph1.font.size = 28;
@@ -95,12 +96,12 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph2.alignment = "Centered";
 
       //Paragraph3
-      // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
-      const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
-      paragraph3.font.color = "#000000";
-      paragraph3.font.size = 28;
-      paragraph3.font.name = "Montserrat ExtraBold";
-      paragraph3.alignment = "Centered";
+      // insert a paragraph at the end of the document. change color to Black. size to 28. font to Montserrat. and center.
+      // const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
+      // paragraph3.font.color = "#000000";
+      // paragraph3.font.size = 28;
+      // paragraph3.font.name = "Montserrat ExtraBold";
+      // paragraph3.alignment = "Centered";
 
       //Paragraph4
       // insert a empty paragraph at the end of the document. size to 36. and center.
@@ -157,8 +158,8 @@ export default class App extends React.Component<AppProps, AppState> {
   clickBioKapseln = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
-
       //Paragraph0
       // insert a paragraph at the start of the document.
       const paragraph = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
@@ -172,12 +173,12 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph.alignment = "Centered";
 
       //Paragraph1
-      // insert a empty paragraph at the end of the document. size to 48. and center.
-      const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
-      paragraph1.font.color = "#000000";
-      paragraph1.font.size = 28;
-      paragraph1.font.name = "Montserrat ExtraBold";
-      paragraph1.alignment = "Centered";
+      // insert a empty paragraph at the end of the document. size to 28. and center.
+      // const paragraph1 = context.document.body.insertParagraph("", Word.InsertLocation.end);
+      // paragraph1.font.color = "#000000";
+      // paragraph1.font.size = 28;
+      // paragraph1.font.name = "Montserrat ExtraBold";
+      // paragraph1.alignment = "Centered";
 
       //Paragraph2
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
@@ -251,6 +252,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickDosenohEtt = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraph = context.document.body.insertParagraph("", Word.InsertLocation.end);
@@ -300,6 +302,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickBioDosenohEtt = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       //Paragraph - BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
@@ -353,6 +356,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickDosenbedruckt = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
@@ -406,6 +410,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickBioDosenbedruckt = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       //Paragraph - BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
@@ -459,6 +464,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickHochregal = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       //Paragraph Leer - ohne BIO Kennzeichnung
       const paragraphBio = context.document.body.insertParagraph("", Word.InsertLocation.end);
@@ -516,6 +522,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickBioHochregal = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
+      context.document.body.font.size = 6;
       await context.sync();
       //Paragraph - BIO Kennzeichnung
       const paragraph = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
