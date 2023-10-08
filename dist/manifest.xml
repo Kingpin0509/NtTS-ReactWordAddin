@@ -79,7 +79,7 @@
         <bt:String id="TaskpaneButton.Label" DefaultValue="Vorlagen"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="GetStarted.Description" DefaultValue="Vorlagenbrowser erfolgreich geladen. Öffne den 'Start' Tab, klick auf 'Vorlagen' und leg los."/>
+        <bt:String id="GetStarted.Description" DefaultValue="Vorlagenbrowser erfolgreich geladen. Öffne den 'Nietiet GmbH' Tab, klick auf 'Vorlagen' und leg los."/>
         <bt:String id="TaskpaneButton.Tooltip" DefaultValue="Klicken um Vorlagen Browser anzuzeigen"/>
       </bt:LongStrings>
     </Resources>
