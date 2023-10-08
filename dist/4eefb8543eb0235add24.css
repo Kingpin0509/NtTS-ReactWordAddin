@@ -28,7 +28,7 @@ ul {
 }
 
 .ms-welcome__headerh1 {
-  margin-top: -10px;
+  margin-top: -15px;
   margin-bottom: 5px;
   font-size: 30px;
 }
@@ -63,8 +63,9 @@ ul {
   text-align: center;
   font-size: 14px;
 }
-p.\.ms-welcome__anleitung.ms-font-s {
-  margin: 35px 5px 0 5px;
+p.ms-welcome__anleitung.ms-font-s {
+  margin: 20px 5px 5px 5px;
+  font-size: 10px;
 }
 
 .ms-welcome__features {
