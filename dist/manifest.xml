@@ -8,7 +8,7 @@
   <Description DefaultValue="Addin zur Einführung unternehmensweiter Vorlagen - Im sinne der Produktivitässteigerung und Förderung der Firmenidentität"/>
   <IconUrl DefaultValue="https://storagenietietofficeword.z13.web.core.windows.net/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://storagenietietofficeword.z13.web.core.windows.net/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://www.pflanzliche-rohstoffe.eu"/>
+  <SupportUrl DefaultValue="https://storagenietietofficeword.z13.web.core.windows.net/"/>
   <AppDomains>
     <AppDomain>https://storagenietietofficeword.z13.web.core.windows.net/</AppDomain>
   </AppDomains>

@@ -9,7 +9,7 @@ import { Image, IImageProps, ImageFit } from "@fluentui/react/lib/Image";
 const imageProps: IImageProps = {
   imageFit: ImageFit.cover,
   //width: 150,
-  height: 350,
+  height: 100,
   // Show a border around the image (just for demonstration purposes)
   styles: (props) => ({ root: { border: "1px solid " + props.theme.palette.neutralSecondary } }),
 };
