@@ -93,6 +93,14 @@ module.exports = async (env, options) => {
       new webpack.ProvidePlugin({
         Promise: ["es6-promise", "Promise"],
       }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: "src/web.config",
+            to: "src/web.config",
+          },
+        ],
+      }),
     ],
     devServer: {
       hot: true,
