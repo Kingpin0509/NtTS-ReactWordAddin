@@ -1,11 +1,20 @@
+/* eslint-disable no-undef */
 import * as React from "react";
-//import { DefaultButton } from "@fluentui/react";
+import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList, { HeroListItem } from "./HeroList";
 import Progress from "./Progress";
+import * as excel from "./Excel.App";
+import * as onenote from "./OneNote.App";
+import * as outlook from "./Outlook.App";
+import * as powerpoint from "./PowerPoint.App";
+import * as project from "./Project.App";
+import * as word from "./Word.App";
 import { Image, IImageProps, ImageFit } from "@fluentui/react/lib/Image";
+
 // These props are defined up here so they can easily be applied to multiple Images.
 // Normally specifying them inline would be fine.
+
 const imageProps: IImageProps = {
   imageFit: ImageFit.cover,
   //width: 150,
@@ -53,9 +62,32 @@ export default class App extends React.Component<AppProps, AppState> {
 
   //onClick Platzhalter
   click = async () => {
-    return Word.run(async (context) => {
-      await context.sync();
-    });
+    switch (Office.context.host) {
+      case Office.HostType.Excel: {
+        const excelApp = new excel.default(this.props, this.context);
+        return excelApp.click();
+      }
+      case Office.HostType.OneNote: {
+        const onenoteApp = new onenote.default(this.props, this.context);
+        return onenoteApp.click();
+      }
+      case Office.HostType.Outlook: {
+        const outlookApp = new outlook.default(this.props, this.context);
+        return outlookApp.click();
+      }
+      case Office.HostType.PowerPoint: {
+        const powerpointApp = new powerpoint.default(this.props, this.context);
+        return powerpointApp.click();
+      }
+      case Office.HostType.Project: {
+        const projectApp = new project.default(this.props, this.context);
+        return projectApp.click();
+      }
+      case Office.HostType.Word: {
+        const wordApp = new word.default(this.props, this.context);
+        return wordApp.click();
+      }
+    }
   };
 
   //Palettenboxen mit Kapselsäcken
@@ -599,7 +631,11 @@ export default class App extends React.Component<AppProps, AppState> {
           <p className="ms-welcome__anleitung ms-font-s">
             <b>Klicke</b> auf eine Vorlage um sie zu <b>laden</b>.
           </p>
-          <br></br>
+          <br>
+            <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
+              Test
+            </DefaultButton>
+          </br>
           <h2>Produktion</h2>
           <h3>Palettenboxen</h3>
           <span className="ms-template-list">
