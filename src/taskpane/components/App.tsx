@@ -1,4 +1,5 @@
 import * as React from "react";
+import { TextField, Stack } from "@fluentui/react";
 import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList, { HeroListItem } from "./HeroList";
@@ -20,10 +21,18 @@ const imageProps: IImageProps = {
 export interface AppProps {
   title: string;
   isOfficeInitialized: boolean;
+  auftrag: string;
+  afk: string;
+  produktname: string;
+  kundenname: string;
 }
 
 export interface AppState {
   listItems: HeroListItem[];
+  auftrag: "";
+  afk: "";
+  produktname: "";
+  kundenname: "";
 }
 
 export default class App extends React.Component<AppProps, AppState> {
@@ -31,8 +40,37 @@ export default class App extends React.Component<AppProps, AppState> {
     super(props, context);
     this.state = {
       listItems: [],
+      auftrag: "",
+      afk: "",
+      produktname: "",
+      kundenname: "",
     };
   }
+  formData = {
+    auftrag: "",
+    afk: "",
+    produktname: "",
+    kundenname: "",
+  };
+  // Handle changes in the input fields
+  handleChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    this.formData[name] = value;
+
+    // this.setState({[name] = value});
+  };
+
+  handleSubmit = async () => {
+    try {
+      await Word.run(async (context) => {
+        await context.sync();
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   componentDidMount() {
     this.setState({
@@ -55,16 +93,17 @@ export default class App extends React.Component<AppProps, AppState> {
 
   click = async () => {
     return Word.run(async (context) => {
-      /**
-       * Insert your Word code here
-       */
-
-      // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
-
-      // change the paragraph color to blue.
-      paragraph.font.color = "blue";
-
+      const paragraph = context.document.body.insertParagraph(
+        this.formData.auftrag +
+          "-A" +
+          "AFK-" +
+          this.formData.afk +
+          "Produkt:" +
+          this.formData.produktname +
+          "Kunde:" +
+          this.formData.kundenname,
+        Word.InsertLocation.end
+      );
       await context.sync();
     });
   };
@@ -99,7 +138,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph2
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
-      const paragraph2 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph2 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph2.font.color = "#000000";
       paragraph2.font.size = 48;
       paragraph2.font.name = "Montserrat ExtraBold";
@@ -127,7 +166,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph6
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
-      const paragraph6 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph6 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph6.font.color = "#000000";
       paragraph6.font.size = 48;
       paragraph6.font.name = "Montserrat ExtraBold";
@@ -147,7 +186,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph9
       // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat. and center.
-      const paragraph9 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph9 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph9.font.color = "#000000";
       paragraph9.font.size = 72;
       paragraph9.font.name = "Montserrat ExtraBold";
@@ -155,7 +194,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph10
       // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat. and center.
-      const paragraph10 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph10 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph10.font.color = "#000000";
       paragraph10.font.size = 72;
       paragraph10.font.name = "Montserrat ExtraBold";
@@ -584,10 +623,10 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
     });
   };
+  // <DefaultButton onClick={this.handleSubmit}>Submit</DefaultButton>
 
   render() {
-    const { title, isOfficeInitialized } = this.props;
-
+    const { title, auftrag, afk, produktname, kundenname, isOfficeInitialized } = this.props;
     if (!isOfficeInitialized) {
       return (
         <Progress
@@ -605,16 +644,25 @@ export default class App extends React.Component<AppProps, AppState> {
           title={this.props.title}
           message="Herzlich Willkommen"
         />
-        /*{" "}
+
         <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
-          <DefaultButton className="ms-welcome__action" iconProps={{ iconName: "ChevronRight" }} onClick={this.click}>
-            Test
-          </DefaultButton>{" "}
-          */
+          <div className="ms-welcome">
+            <h1 className="ms-welcome__header">Input Form</h1>
+            <Stack tokens={{ childrenGap: 5 }}>
+              <TextField label="Auftrag" name="auftrag" onChange={this.handleChange} />
+              <TextField label="AFK" name="afk" onChange={this.handleChange} />
+              <TextField label="Produktname" name="produktname" onChange={this.handleChange} />
+              <TextField label="Kundenname" name="kundenname" onChange={this.handleChange} />
+            </Stack>
+          </div>
+          <DefaultButton onClick={this.click}>Click</DefaultButton>
           <p className="ms-welcome__anleitung ms-font-s">
             <b>Klicke</b> auf eine Vorlage um sie zu <b>laden</b>.
           </p>
-          <br></br>
+          <br />
+          <p>{this.formData.auftrag}</p>
+          <br />
+
           <h2>Produktion</h2>
           <h3>Palettenboxen</h3>
           <span className="ms-template-list">
