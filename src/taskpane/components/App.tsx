@@ -21,8 +21,8 @@ const imageProps: IImageProps = {
 export interface AppProps {
   title: string;
   isOfficeInitialized: boolean;
-  auftrag: string;
-  afk: string;
+  auftrag: number;
+  afk: number;
   produktname: string;
   kundenname: string;
 }
@@ -47,10 +47,10 @@ export default class App extends React.Component<AppProps, AppState> {
     };
   }
   formData = {
-    auftrag: "",
-    afk: "",
-    produktname: "",
-    kundenname: "",
+    auftrag: "000",
+    afk: "000",
+    produktname: "Produktname",
+    kundenname: "Kundenname",
   };
   // Handle changes in the input fields
   handleChange = (event) => {
@@ -93,6 +93,8 @@ export default class App extends React.Component<AppProps, AppState> {
 
   click = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
       const paragraph = context.document.body.insertParagraph(
         this.formData.auftrag +
           "-A" +
@@ -146,11 +148,11 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph3
       // insert a paragraph at the end of the document. change color to Black. size to 28. font to Montserrat. and center.
-      // const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
-      // paragraph3.font.color = "#000000";
-      // paragraph3.font.size = 28;
-      // paragraph3.font.name = "Montserrat ExtraBold";
-      // paragraph3.alignment = "Centered";
+      const paragraph3 = context.document.body.insertParagraph("Pulver-Kapseln", Word.InsertLocation.end);
+      paragraph3.font.color = "#000000";
+      paragraph3.font.size = 28;
+      paragraph3.font.name = "Montserrat ExtraBold";
+      paragraph3.alignment = "Centered";
 
       //Paragraph4
       // insert a empty paragraph at the end of the document. size to 36. and center.
@@ -231,7 +233,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph2
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
-      const paragraph2 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph2 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph2.font.color = "#000000";
       paragraph2.font.size = 48;
       paragraph2.font.name = "Montserrat ExtraBold";
@@ -259,7 +261,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph6
       // insert a paragraph at the end of the document. change color to Black. size to 48. font to Montserrat. and center.
-      const paragraph6 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph6 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph6.font.color = "#000000";
       paragraph6.font.size = 48;
       paragraph6.font.name = "Montserrat ExtraBold";
@@ -279,7 +281,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph9
       // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat. and center.
-      const paragraph9 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph9 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph9.font.color = "#000000";
       paragraph9.font.size = 72;
       paragraph9.font.name = "Montserrat ExtraBold";
@@ -287,7 +289,7 @@ export default class App extends React.Component<AppProps, AppState> {
 
       //Paragraph10
       // insert a paragraph at the end of the document. change color to Black. size to 72. font to Montserrat. and center.
-      const paragraph10 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph10 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph10.font.color = "#000000";
       paragraph10.font.size = 72;
       paragraph10.font.name = "Montserrat ExtraBold";
@@ -310,7 +312,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph.font.name = "Montserrat ExtraBold";
       paragraph.alignment = "Centered";
       //Paragraphen - Dosen ohne Etikett
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph0 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph0.font.color = "#000000";
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
@@ -327,7 +329,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph3.font.size = 36;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph4 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph4.font.size = 48;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
@@ -335,11 +337,11 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
-      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph6 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph6.font.size = 72;
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
-      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph7 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph7.font.size = 72;
       paragraph7.font.name = "Montserrat ExtraBold";
       paragraph7.alignment = "Centered";
@@ -365,7 +367,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph00.font.size = 28;
       paragraph00.font.name = "Montserrat ExtraBold";
       paragraph00.alignment = "Centered";
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph0 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
@@ -381,7 +383,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph3.font.size = 36;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph4 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph4.font.size = 48;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
@@ -389,11 +391,11 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
-      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph6 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph6.font.size = 72;
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
-      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph7 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph7.font.size = 72;
       paragraph7.font.name = "Montserrat ExtraBold";
       paragraph7.alignment = "Centered";
@@ -418,7 +420,7 @@ export default class App extends React.Component<AppProps, AppState> {
       //paragraph00.font.size = 36;
       //paragraph00.font.name = "Montserrat ExtraBold";
       //paragraph00.alignment = "Centered";
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph0 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph0.font.color = "#000000";
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
@@ -435,7 +437,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph3.font.size = 36;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph4 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph4.font.size = 48;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
@@ -443,11 +445,11 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
-      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph6 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph6.font.size = 72;
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
-      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph7 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph7.font.size = 72;
       paragraph7.font.name = "Montserrat ExtraBold";
       paragraph7.alignment = "Centered";
@@ -473,7 +475,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph00.font.size = 36;
       paragraph00.font.name = "Montserrat ExtraBold";
       paragraph00.alignment = "Centered";
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph0 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
       paragraph0.alignment = "Centered";
@@ -489,7 +491,7 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph3.font.size = 36;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph4 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph4.font.size = 48;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
@@ -497,11 +499,11 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
       paragraph5.alignment = "Centered";
-      const paragraph6 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph6 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph6.font.size = 72;
       paragraph6.font.name = "Montserrat ExtraBold";
       paragraph6.alignment = "Centered";
-      const paragraph7 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph7 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph7.font.size = 72;
       paragraph7.font.name = "Montserrat ExtraBold";
       paragraph7.alignment = "Centered";
@@ -527,7 +529,7 @@ export default class App extends React.Component<AppProps, AppState> {
       //paragraph00.font.size = 36;
       //paragraph00.font.name = "Montserrat ExtraBold";
       //paragraph00.alignment = "Centered";
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph0 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph0.font.color = "#000000";
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
@@ -536,7 +538,7 @@ export default class App extends React.Component<AppProps, AppState> {
       //paragraph1.font.size = 36;
       //paragraph1.font.name = "Montserrat ExtraBold";
       //paragraph1.alignment = "Centered";
-      const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph2 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph2.font.size = 36;
       paragraph2.font.name = "Montserrat ExtraBold";
       paragraph2.alignment = "Centered";
@@ -544,12 +546,12 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph3.font.size = 28;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph4 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph4.font.color = "#000000";
       paragraph4.font.size = 72;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
-      const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph5 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph5.font.color = "#000000";
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
@@ -584,7 +586,7 @@ export default class App extends React.Component<AppProps, AppState> {
       //paragraph00.font.size = 36;
       //paragraph00.font.name = "Montserrat ExtraBold";
       //paragraph00.alignment = "Centered";
-      const paragraph0 = context.document.body.insertParagraph("Produktname", Word.InsertLocation.end);
+      const paragraph0 = context.document.body.insertParagraph("" + this.formData.produktname, Word.InsertLocation.end);
       paragraph0.font.color = "#000000";
       paragraph0.font.size = 48;
       paragraph0.font.name = "Montserrat ExtraBold";
@@ -593,7 +595,7 @@ export default class App extends React.Component<AppProps, AppState> {
       //paragraph1.font.size = 36;
       //paragraph1.font.name = "Montserrat ExtraBold";
       //paragraph1.alignment = "Centered";
-      const paragraph2 = context.document.body.insertParagraph("Kundenname", Word.InsertLocation.end);
+      const paragraph2 = context.document.body.insertParagraph("" + this.formData.kundenname, Word.InsertLocation.end);
       paragraph2.font.size = 36;
       paragraph2.font.name = "Montserrat ExtraBold";
       paragraph2.alignment = "Centered";
@@ -601,12 +603,12 @@ export default class App extends React.Component<AppProps, AppState> {
       paragraph3.font.size = 28;
       paragraph3.font.name = "Montserrat ExtraBold";
       paragraph3.alignment = "Centered";
-      const paragraph4 = context.document.body.insertParagraph("AFK-000", Word.InsertLocation.end);
+      const paragraph4 = context.document.body.insertParagraph("AFK-" + this.formData.afk, Word.InsertLocation.end);
       paragraph4.font.color = "#000000";
       paragraph4.font.size = 72;
       paragraph4.font.name = "Montserrat ExtraBold";
       paragraph4.alignment = "Centered";
-      const paragraph5 = context.document.body.insertParagraph("000-A", Word.InsertLocation.end);
+      const paragraph5 = context.document.body.insertParagraph(this.formData.auftrag + "-A", Word.InsertLocation.end);
       paragraph5.font.color = "#000000";
       paragraph5.font.size = 36;
       paragraph5.font.name = "Montserrat ExtraBold";
@@ -644,25 +646,20 @@ export default class App extends React.Component<AppProps, AppState> {
           title={this.props.title}
           message="Herzlich Willkommen"
         />
-
         <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
-          <div className="ms-welcome">
-            <h1 className="ms-welcome__header">Input Form</h1>
-            <Stack tokens={{ childrenGap: 5 }}>
-              <TextField label="Auftrag" name="auftrag" onChange={this.handleChange} />
-              <TextField label="AFK" name="afk" onChange={this.handleChange} />
-              <TextField label="Produktname" name="produktname" onChange={this.handleChange} />
-              <TextField label="Kundenname" name="kundenname" onChange={this.handleChange} />
-            </Stack>
-          </div>
-          <DefaultButton onClick={this.click}>Click</DefaultButton>
+          <h1 className="ms-welcome__header">Formular</h1>
+          <Stack tokens={{ childrenGap: 5 }}>
+            <span className="ms-template-list">
+              <TextField label="Auftrags Nr." name="auftrag" onChange={this.handleChange} />
+              <TextField label="AFK-" name="afk" onChange={this.handleChange} />
+            </span>
+            <TextField label="Produktname" name="produktname" onChange={this.handleChange} />
+            <TextField label="Kundenname" name="kundenname" onChange={this.handleChange} />
+          </Stack>
           <p className="ms-welcome__anleitung ms-font-s">
             <b>Klicke</b> auf eine Vorlage um sie zu <b>laden</b>.
           </p>
           <br />
-          <p>{this.formData.auftrag}</p>
-          <br />
-
           <h2>Produktion</h2>
           <h3>Palettenboxen</h3>
           <span className="ms-template-list">
