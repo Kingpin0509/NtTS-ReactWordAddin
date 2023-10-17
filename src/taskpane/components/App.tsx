@@ -1,6 +1,6 @@
 import * as React from "react";
 import { TextField, Stack } from "@fluentui/react";
-import { DefaultButton } from "@fluentui/react";
+// import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList, { HeroListItem } from "./HeroList";
 import Progress from "./Progress";
@@ -62,15 +62,15 @@ export default class App extends React.Component<AppProps, AppState> {
     // this.setState({[name] = value});
   };
 
-  handleSubmit = async () => {
-    try {
-      await Word.run(async (context) => {
-        await context.sync();
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // handleSubmit = async () => {
+  //   try {
+  //     await Word.run(async (context) => {
+  //       await context.sync();
+  //     });
+  //   } catch (error) {
+  //     error(error);
+  //   }
+  // };
 
   componentDidMount() {
     this.setState({
@@ -91,24 +91,24 @@ export default class App extends React.Component<AppProps, AppState> {
     });
   }
 
-  click = async () => {
-    return Word.run(async (context) => {
-      context.document.body.clear();
-      await context.sync();
-      const paragraph = context.document.body.insertParagraph(
-        this.formData.auftrag +
-          "-A" +
-          "AFK-" +
-          this.formData.afk +
-          "Produkt:" +
-          this.formData.produktname +
-          "Kunde:" +
-          this.formData.kundenname,
-        Word.InsertLocation.end
-      );
-      await context.sync();
-    });
-  };
+  // click = async () => {
+  //   return Word.run(async (context) => {
+  //     context.document.body.clear();
+  //     await context.sync();
+  //     const paragraph = context.document.body.insertParagraph(
+  //       this.formData.auftrag +
+  //         "-A" +
+  //         "AFK-" +
+  //         this.formData.afk +
+  //         "Produkt:" +
+  //         this.formData.produktname +
+  //         "Kunde:" +
+  //         this.formData.kundenname,
+  //       Word.InsertLocation.end
+  //     );
+  //     await context.sync();
+  //   });
+  // };
   //Palettenboxen mit Kapselsäcken
   clickKapseln = async () => {
     return Word.run(async (context) => {
@@ -628,7 +628,7 @@ export default class App extends React.Component<AppProps, AppState> {
   // <DefaultButton onClick={this.handleSubmit}>Submit</DefaultButton>
 
   render() {
-    const { title, auftrag, afk, produktname, kundenname, isOfficeInitialized } = this.props;
+    const { title, isOfficeInitialized } = this.props;
     if (!isOfficeInitialized) {
       return (
         <Progress
@@ -649,11 +649,11 @@ export default class App extends React.Component<AppProps, AppState> {
         <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
           <h3 className="ms-welcome__header">Formular</h3>
           <Stack tokens={{ childrenGap: 5 }}>
-            <TextField label="Produkt:" name="produktname" onChange={this.handleChange} />
-            <TextField label="Kunde:" name="kundenname" onChange={this.handleChange} />
+            <TextField underlined label="Produkt:" name="produktname" onChange={this.handleChange} />
+            <TextField underlined label="Kunde:" name="kundenname" onChange={this.handleChange} />
             <span className="ms-template-list">
-              <TextField label="Auftrags Nr." name="auftrag" onChange={this.handleChange} />
-              <TextField label="AFK-" name="afk" onChange={this.handleChange} />
+              <TextField underlined label="Auftrags Nr." name="auftrag" onChange={this.handleChange} suffix="-A" />
+              <TextField underlined label="AFK-" name="afk" onChange={this.handleChange} prefix="AFK-" />
             </span>
           </Stack>
           <p className="ms-welcome__anleitung ms-font-s">
