@@ -647,17 +647,18 @@ export default class App extends React.Component<AppProps, AppState> {
           message="Herzlich Willkommen"
         />
         <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
-          <h3 className="ms-welcome__header">Formular</h3>
-          <Stack tokens={{ maxWidth: 300, childrenGap: 10 }}>
+          <h3 className="ms-welcome__header"></h3>
+          <Stack tokens={{ maxWidth: 260, childrenGap: 5 }}>
             <TextField underlined label="Produkt:" name="produktname" onChange={this.handleChange} />
             <TextField underlined label="Kunde:" name="kundenname" onChange={this.handleChange} />
             <span className="ms-template-list">
-              <TextField underlined name="auftrag" onChange={this.handleChange} suffix="-A" />
-              <TextField underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
+              <TextField width={75} underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
+              <TextField width={75} underlined name="auftrag" onChange={this.handleChange} suffix="- A " />
             </span>
           </Stack>
           <p className="ms-welcome__anleitung ms-font-s">
-            <b>Klicke</b> auf eine Vorlage um sie zu <b>laden</b>.
+            Produkt-, Kundenname und Auftragsnummern <b>eintragen</b> und auf eine Vorlage <b>klicken</b> um diese mit
+            Inhalt zu erstellen.
           </p>
           <br />
           <h2>Produktion</h2>
