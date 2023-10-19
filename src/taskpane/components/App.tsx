@@ -648,12 +648,14 @@ export default class App extends React.Component<AppProps, AppState> {
         />
         <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
           <h3 className="ms-welcome__header"></h3>
-          <Stack tokens={{ maxWidth: 260, childrenGap: 5 }}>
+          <Stack tokens={{ maxWidth: 200, childrenGap: 5 }}>
             <TextField underlined label="Produkt:" name="produktname" onChange={this.handleChange} />
             <TextField underlined label="Kunde:" name="kundenname" onChange={this.handleChange} />
             <span className="ms-template-list">
-              <TextField width={75} underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
-              <TextField width={75} underlined name="auftrag" onChange={this.handleChange} suffix="- A " />
+              <Stack tokens={{ maxWidth: 95, childrenGap: 5 }}>
+                <TextField underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
+                <TextField underlined name="auftrag" onChange={this.handleChange} suffix=" -  A  " />
+              </Stack>
             </span>
           </Stack>
           <p className="ms-welcome__anleitung ms-font-s">
