@@ -89,7 +89,6 @@ p.ms-welcome__anleitung.ms-font-s {
 .ms-template-list {
   display: flex;
   height: 100%;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
