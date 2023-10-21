@@ -677,7 +677,7 @@ export default class App extends React.Component<AppProps, AppState> {
                   mask="***"
                   maskFormat={maskFormatnr}
                   maskChar="0"
-                  suffix="-A"
+                  suffix="  - A   "
                 />
               </Stack>
             </span>
