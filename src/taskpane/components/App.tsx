@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextField, Stack } from "@fluentui/react";
+import { TextField, MaskedTextField, Stack } from "@fluentui/react";
 // import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList, { HeroListItem } from "./HeroList";
@@ -626,7 +626,9 @@ export default class App extends React.Component<AppProps, AppState> {
     });
   };
   // <DefaultButton onClick={this.handleSubmit}>Submit</DefaultButton>
-
+  // const maskFormat: { [key: string]: RegExp } = {
+  //   "*": /[a-zA-Z0-9_]/,
+  // };
   render() {
     const { title, isOfficeInitialized } = this.props;
     if (!isOfficeInitialized) {
@@ -639,6 +641,12 @@ export default class App extends React.Component<AppProps, AppState> {
       );
     }
 
+    const maskFormatnr: { [key: string]: RegExp } = {
+      "*": /[0-9]/,
+    };
+    const stackTokens = { maxWidth: 200, childrenGap: 5 };
+    const stackTokens1 = { maxWidth: 95, childrenGap: 5 };
+
     return (
       <div className="ms-welcome">
         <Header
@@ -648,16 +656,33 @@ export default class App extends React.Component<AppProps, AppState> {
         />
         <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
           <h3 className="ms-welcome__header"></h3>
-          <Stack tokens={{ maxWidth: 200, childrenGap: 5 }}>
+          <Stack tokens={stackTokens}>
             <TextField underlined label="Produkt:" name="produktname" onChange={this.handleChange} />
             <TextField underlined label="Kunde:" name="kundenname" onChange={this.handleChange} />
             <span className="ms-template-list">
-              <Stack tokens={{ maxWidth: 95, childrenGap: 5 }}>
-                <TextField underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
-                <TextField underlined name="auftrag" onChange={this.handleChange} suffix=" -  A  " />
+              <Stack tokens={stackTokens1}>
+                {/* <TextField underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
+                <TextField underlined name="auftrag" onChange={this.handleChange} suffix=" -  A  " /> */}
+                <MaskedTextField
+                  underlined
+                  onChange={this.handleChange}
+                  name="afk"
+                  mask="AFK-***"
+                  maskFormat={maskFormatnr}
+                  maskChar="0"
+                />
+                <MaskedTextField
+                  underlined
+                  onChange={this.handleChange}
+                  name="auftrag"
+                  mask="***-A"
+                  maskFormat={maskFormatnr}
+                  maskChar="0"
+                />{" "}
               </Stack>
             </span>
           </Stack>
+
           <p className="ms-welcome__anleitung ms-font-s">
             Produkt-, Kundenname und Auftragsnummern <b>eintragen</b> und auf eine Vorlage <b>klicken</b> um diese mit
             Inhalt zu erstellen.
