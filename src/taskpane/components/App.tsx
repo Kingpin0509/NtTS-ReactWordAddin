@@ -661,24 +661,24 @@ export default class App extends React.Component<AppProps, AppState> {
             <TextField underlined label="Kunde:" name="kundenname" onChange={this.handleChange} />
             <span className="ms-template-list">
               <Stack tokens={stackTokens1}>
-                {/* <TextField underlined name="afk" onChange={this.handleChange} prefix="AFK-" />
-                <TextField underlined name="auftrag" onChange={this.handleChange} suffix=" -  A  " /> */}
                 <MaskedTextField
                   underlined
                   onChange={this.handleChange}
                   name="afk"
-                  mask="AFK-***"
+                  mask="***"
                   maskFormat={maskFormatnr}
                   maskChar="0"
+                  prefix="AFK-"
                 />
                 <MaskedTextField
                   underlined
                   onChange={this.handleChange}
                   name="auftrag"
-                  mask="***-A"
+                  mask="***"
                   maskFormat={maskFormatnr}
                   maskChar="0"
-                />{" "}
+                  suffix="-A"
+                />
               </Stack>
             </span>
           </Stack>
