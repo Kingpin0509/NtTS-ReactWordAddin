@@ -26,7 +26,7 @@
     "watch": "webpack --mode development --watch"
   },
   "dependencies": {
-    "@fluentui/react": "^8.112.3",
+    "@fluentui/react": "^8.112.4",
     "core-js": "^3.33.1",
     "es6-promise": "^4.2.8",
     "react": "^17.0.2",
@@ -43,7 +43,7 @@
     "@types/react-hot-loader": "^4.1.1",
     "@types/webpack": "^4.41.35",
     "@types/webpack-dev-server": "^4.7.2",
-    "acorn": "^8.11.1",
+    "acorn": "^8.11.2",
     "babel-loader": "^8.3.0",
     "copy-webpack-plugin": "^9.1.0",
     "eslint-plugin-office-addins": "^2.1.7",
