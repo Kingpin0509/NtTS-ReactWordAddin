@@ -16,7 +16,7 @@
     <Host Name="Document"/>
   </Hosts>  
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://storagenietietofficeword.z13.web.core.windows.net/taskpane.html"/>
+    <SourceLocation DefaultValue="https://kingpin0509.github.io/NtTS-ReactWordAddin/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
