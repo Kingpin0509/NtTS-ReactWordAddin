@@ -634,6 +634,8 @@ export default class App extends React.Component<AppProps, AppState> {
       const searchResults = context.document.body.search("Produkt", { ignorePunct: true });
       // Queue a command to load the font property values.
       searchResults.load("font");
+      // Queue a command to load the font property values.
+      searchResults.load("context");
       // Synchronize the document state.
       await context.sync();
       console.log(new Error("Found count: " + searchResults.items.length));
@@ -643,24 +645,18 @@ export default class App extends React.Component<AppProps, AppState> {
         searchResults.items[i].font.color = "purple";
         searchResults.items[i].font.highlightColor = "#FFFF00"; //Yellow
         searchResults.items[i].font.bold = true;
+        searchResults.items[i].insertText("Gerstengras", Word.InsertLocation.start);
       }
       // Synchronize the document state.
       await context.sync();
-
-      // context.document.body.clear();
-      // context.document.body.font.size = 6;
-      // await context.sync();
-      // const paragraph = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
-      // paragraph.font.color = "#BED200";
-      // paragraph.font.size = 72;
-      // paragraph.font.name = "Montserrat ExtraBold";
-      // paragraph.alignment = "Centered";
     });
   };
+
   // <DefaultButton onClick={this.handleSubmit}>Submit</DefaultButton>
   // const maskFormat: { [key: string]: RegExp } = {
   //   "*": /[a-zA-Z0-9_]/,
   // };
+
   render() {
     const { title, isOfficeInitialized } = this.props;
     if (!isOfficeInitialized) {
