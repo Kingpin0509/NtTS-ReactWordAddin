@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import * as React from "react";
 import { TextField, MaskedTextField, Stack } from "@fluentui/react";
 // import { DefaultButton } from "@fluentui/react";
@@ -625,6 +626,37 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
     });
   };
+
+  //Wiegeprotokoll erstellen
+  clickWiegeprotokollerstellen = async () => {
+    return Word.run(async (context) => {
+      // Queue a command to search the document and ignore punctuation.
+      const searchResults = context.document.body.search("Produkt", { ignorePunct: true });
+      // Queue a command to load the font property values.
+      searchResults.load("font");
+      // Synchronize the document state.
+      await context.sync();
+      console.log(new Error("Found count: " + searchResults.items.length));
+
+      // Queue a set of commands to change the font for each found item.
+      for (let i = 0; i < searchResults.items.length; i++) {
+        searchResults.items[i].font.color = "purple";
+        searchResults.items[i].font.highlightColor = "#FFFF00"; //Yellow
+        searchResults.items[i].font.bold = true;
+      }
+      // Synchronize the document state.
+      await context.sync();
+
+      // context.document.body.clear();
+      // context.document.body.font.size = 6;
+      // await context.sync();
+      // const paragraph = context.document.body.insertParagraph("BIO", Word.InsertLocation.end);
+      // paragraph.font.color = "#BED200";
+      // paragraph.font.size = 72;
+      // paragraph.font.name = "Montserrat ExtraBold";
+      // paragraph.alignment = "Centered";
+    });
+  };
   // <DefaultButton onClick={this.handleSubmit}>Submit</DefaultButton>
   // const maskFormat: { [key: string]: RegExp } = {
   //   "*": /[a-zA-Z0-9_]/,
@@ -757,6 +789,17 @@ export default class App extends React.Component<AppProps, AppState> {
               {...imageProps}
               src="./../../../assets/HLVerdoselteWareBio.png"
               alt="Verdoselte Bio Ware"
+            ></Image>
+          </span>
+          <h2>Experiment</h2>
+          <h3>Auftragsdokumenterstellung</h3>
+          <span className="ms-template-list">
+            <Image
+              className="ms-welcome__imageaction"
+              onClick={this.clickWiegeprotokollerstellen}
+              {...imageProps}
+              src="./../../../assets/HLVerdoselteWare.png"
+              alt="Verdoselte Ware"
             ></Image>
           </span>
         </HeroList>
