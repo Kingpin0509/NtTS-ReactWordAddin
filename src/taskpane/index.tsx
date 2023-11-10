@@ -36,7 +36,7 @@ const myTheme = createTheme({
     neutralPrimaryAlt: "#3b3a39",
     neutralPrimary: "#323130",
     neutralDark: "#201f1e",
-    black: "#000000",
+    black: "#3a3c42",
     white: "#ffffff",
   },
 });
