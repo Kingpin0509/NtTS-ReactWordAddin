@@ -631,7 +631,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickWiegeprotokollerstellen = async () => {
     return Word.run(async (context) => {
       // Queue a command to search the document and ignore punctuation.
-      const searchResults = context.document.body.search("Produkt", { ignorePunct: true });
+      const searchResults = context.document.body.search("ProduktX", { ignorePunct: true });
       // Queue a command to load the font property values.
       searchResults.load("font");
       // Queue a command to load the font property values.
@@ -642,8 +642,8 @@ export default class App extends React.Component<AppProps, AppState> {
 
       // Queue a set of commands to change the font for each found item.
       for (let i = 0; i < searchResults.items.length; i++) {
-        searchResults.items[i].font.color = "purple";
-        searchResults.items[i].font.highlightColor = "#FFFF00"; //Yellow
+        searchResults.items[i].font.color = "#3a3c42";
+        searchResults.items[i].font.highlightColor = "#3a3c42"; //Yellow
         searchResults.items[i].font.bold = true;
         searchResults.items[i].insertText("Gerstengras", Word.InsertLocation.start);
       }
