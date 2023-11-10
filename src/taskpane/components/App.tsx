@@ -642,8 +642,9 @@ export default class App extends React.Component<AppProps, AppState> {
 
       // Queue a set of commands to change the font for each found item.
       for (let i = 0; i < searchResults.items.length; i++) {
+        searchResults.items[i].font.name = "Montserrat ExtraBold";
         searchResults.items[i].font.color = "#3a3c42";
-        searchResults.items[i].font.highlightColor = "#3a3c42"; //Yellow
+        searchResults.items[i].font.highlightColor = "#E3FF50";
         searchResults.items[i].font.bold = true;
         searchResults.items[i].insertText("Gerstengras", Word.InsertLocation.start);
       }
