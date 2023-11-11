@@ -652,11 +652,12 @@ export default class App extends React.Component<AppProps, AppState> {
       console.log("Found count: " + searchResultsProduktX.items.length);
       // Queue a set of commands to change the font for each found item.
       for (let i = 0; i < searchResultsProduktX.items.length; i++) {
-        searchResultsProduktX.items[i].insertText("Gerstengras", Word.InsertLocation.start);
+        searchResultsProduktX.items[i].insertText("" + this.formData.produktname, Word.InsertLocation.start);
         searchResultsProduktX.items[i].font.name = "Montserrat ExtraBold";
         searchResultsProduktX.items[i].font.color = "#3a3c42";
         searchResultsProduktX.items[i].font.highlightColor = "#E3FF50";
         searchResultsProduktX.items[i].font.bold = true;
+        searchResultsProduktX.items[i].font.underline = "Single";
       }
       // Synchronize the document state.
       await context.sync();
@@ -668,11 +669,12 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
       console.log("Found count: " + searchResultsAuftragX.items.length);
       for (let i = 0; i < searchResultsAuftragX.items.length; i++) {
-        searchResultsAuftragX.items[i].insertText("AFK-425", Word.InsertLocation.start);
+        searchResultsAuftragX.items[i].insertText("AFK-" + this.formData.afk, Word.InsertLocation.start);
         searchResultsAuftragX.items[i].font.name = "Montserrat ExtraBold";
         searchResultsAuftragX.items[i].font.color = "#3a3c42";
         searchResultsAuftragX.items[i].font.highlightColor = "#E3FF50";
         searchResultsAuftragX.items[i].font.bold = true;
+        searchResultsAuftragX.items[i].font.underline = "Single";
       }
       await context.sync();
 
@@ -688,6 +690,7 @@ export default class App extends React.Component<AppProps, AppState> {
         searchResultsSollG.items[i].font.color = "#3a3c42";
         searchResultsSollG.items[i].font.highlightColor = "#E3FF50";
         searchResultsSollG.items[i].font.bold = true;
+        searchResultsSollG.items[i].font.underline = "Single";
       }
       await context.sync();
 
@@ -703,6 +706,7 @@ export default class App extends React.Component<AppProps, AppState> {
         searchResultsminG.items[i].font.color = "#3a3c42";
         searchResultsminG.items[i].font.highlightColor = "#E3FF50";
         searchResultsminG.items[i].font.bold = true;
+        searchResultsminG.items[i].font.underline = "Single";
       }
       await context.sync();
 
@@ -718,6 +722,7 @@ export default class App extends React.Component<AppProps, AppState> {
         searchResultsmaxG.items[i].font.color = "#3a3c42";
         searchResultsmaxG.items[i].font.highlightColor = "#E3FF50";
         searchResultsmaxG.items[i].font.bold = true;
+        searchResultsmaxG.items[i].font.underline = "Single";
       }
       await context.sync();
     });
@@ -859,13 +864,14 @@ export default class App extends React.Component<AppProps, AppState> {
           </span>
           <h2>Experiment</h2>
           <h3>Auftragsdokumenterstellung</h3>
+          <h3>Wiegeprotokoll</h3>
           <span className="ms-template-list">
             <Image
               className="ms-welcome__imageaction"
               onClick={this.clickWiegeprotokollerstellen}
               {...imageProps}
-              src="./../../../assets/HLVerdoselteWare.png"
-              alt="Verdoselte Ware"
+              src="./../../../assets/AFKWiegeprotokollSpat.png"
+              alt="Wiegeprotokoll Spätschicht"
             ></Image>
           </span>
         </HeroList>
