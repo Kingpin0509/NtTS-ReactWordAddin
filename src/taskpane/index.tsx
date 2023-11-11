@@ -11,7 +11,7 @@ initializeIcons();
 
 let isOfficeInitialized = false;
 
-const title = "Nietiet GmbH Office Add-in";
+const title = "Nietiet GmbH Word Office Add-in";
 
 const myTheme = createTheme({
   palette: {

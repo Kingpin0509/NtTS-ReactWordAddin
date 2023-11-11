@@ -4,7 +4,7 @@
   <Version>4.0.0.0</Version>
   <ProviderName>Michael Humann</ProviderName>
   <DefaultLocale>de-De</DefaultLocale>
-  <DisplayName DefaultValue="Vorlagenbrowser - Nietiet GmbH"/>
+  <DisplayName DefaultValue="Nietiet GmbH - Office Word Addin"/>
   <Description DefaultValue="Addin zur Einführung unternehmensweiter Vorlagen - Im sinne der Produktivitässteigerung und Förderung der Firmenidentität"/>
   <IconUrl DefaultValue="https://storagenietietofficeword.z13.web.core.windows.net/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://storagenietietofficeword.z13.web.core.windows.net/assets/icon-64.png"/>

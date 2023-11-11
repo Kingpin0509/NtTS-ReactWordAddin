@@ -78,15 +78,15 @@ export default class App extends React.Component<AppProps, AppState> {
       listItems: [
         {
           icon: "Ribbon",
-          primaryText: "Steigerung der Betriebsqualität",
+          primaryText: "",
         },
         {
           icon: "Unlock",
-          primaryText: "Freigeben von Unternehmensressourcen",
+          primaryText: "",
         },
         {
           icon: "Design",
-          primaryText: "Förderung einheitlicher Firmenkultur und -identität",
+          primaryText: "",
         },
       ],
     });
@@ -742,7 +742,7 @@ export default class App extends React.Component<AppProps, AppState> {
           title={this.props.title}
           message="Herzlich Willkommen"
         />
-        <HeroList message="One-Klick A4 Standardvorlagen" items={this.state.listItems}>
+        <HeroList message="Word Office Add-in" items={this.state.listItems}>
           <h3 className="ms-welcome__header"></h3>
           <Stack tokens={stackTokens}>
             <TextField underlined label="Produkt:" name="produktname" onChange={this.handleChange} />
