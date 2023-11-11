@@ -630,29 +630,88 @@ export default class App extends React.Component<AppProps, AppState> {
   //Wiegeprotokoll erstellen
   clickWiegeprotokollerstellen = async () => {
     return Word.run(async (context) => {
+      //Suche nach ProduktX
       // Queue a command to search the document and ignore punctuation.
-      const searchResults = context.document.body.search("ProduktX", { ignorePunct: true });
+      const searchResultsProduktX = context.document.body.search("ProduktX", { ignorePunct: true });
       // Queue a command to load the font property values.
-      searchResults.load("font");
+      searchResultsProduktX.load("font");
       // Queue a command to load the font property values.
-      searchResults.load("context");
+      searchResultsProduktX.load("context");
       // Synchronize the document state.
       await context.sync();
-      console.log(new Error("Found count: " + searchResults.items.length));
-
+      console.log(new Error("Found count: " + searchResultsProduktX.items.length));
       // Queue a set of commands to change the font for each found item.
-      for (let i = 0; i < searchResults.items.length; i++) {
-        searchResults.items[i].font.name = "Montserrat ExtraBold";
-        searchResults.items[i].font.color = "#3a3c42";
-        searchResults.items[i].font.highlightColor = "#E3FF50";
-        searchResults.items[i].font.bold = true;
-        searchResults.items[i].insertText("Gerstengras", Word.InsertLocation.start);
+      for (let i = 0; i < searchResultsProduktX.items.length; i++) {
+        searchResultsProduktX.items[i].insertText("Gerstengras", Word.InsertLocation.start);
+        searchResultsProduktX.items[i].font.name = "Montserrat ExtraBold";
+        searchResultsProduktX.items[i].font.color = "#3a3c42";
+        searchResultsProduktX.items[i].font.highlightColor = "#E3FF50";
+        searchResultsProduktX.items[i].font.bold = true;
       }
       // Synchronize the document state.
       await context.sync();
+
+      //Wiegeprotokoll Auftrag ausfüllen
+      const searchResultsAuftragX = context.document.body.search("AuftragX", { ignorePunct: true });
+      searchResultsAuftragX.load("font");
+      searchResultsAuftragX.load("context");
+      await context.sync();
+      console.log(new Error("Found count: " + searchResultsAuftragX.items.length));
+      for (let i = 0; i < searchResultsAuftragX.items.length; i++) {
+        searchResultsAuftragX.items[i].insertText("AFK-425", Word.InsertLocation.start);
+        searchResultsAuftragX.items[i].font.name = "Montserrat ExtraBold";
+        searchResultsAuftragX.items[i].font.color = "#3a3c42";
+        searchResultsAuftragX.items[i].font.highlightColor = "#E3FF50";
+        searchResultsAuftragX.items[i].font.bold = true;
+      }
+      await context.sync();
+
+      //Wiegeprotokoll Soll Gewicht ausfüllen
+      const searchResultsSollG = context.document.body.search("SollG", { ignorePunct: true });
+      searchResultsSollG.load("font");
+      searchResultsSollG.load("context");
+      await context.sync();
+      console.log(new Error("Found count: " + searchResultsSollG.items.length));
+      for (let i = 0; i < searchResultsSollG.items.length; i++) {
+        searchResultsSollG.items[i].insertText("100", Word.InsertLocation.start);
+        searchResultsSollG.items[i].font.name = "Montserrat ExtraBold";
+        searchResultsSollG.items[i].font.color = "#3a3c42";
+        searchResultsSollG.items[i].font.highlightColor = "#E3FF50";
+        searchResultsSollG.items[i].font.bold = true;
+      }
+      await context.sync();
+
+      //Wiegeprotokoll Mindest Gewicht ausfüllen
+      const searchResultsminG = context.document.body.search("minG", { ignorePunct: true });
+      searchResultsminG.load("font");
+      searchResultsminG.load("context");
+      await context.sync();
+      console.log(new Error("Found count: " + searchResultsminG.items.length));
+      for (let i = 0; i < searchResultsminG.items.length; i++) {
+        searchResultsminG.items[i].insertText("80", Word.InsertLocation.start);
+        searchResultsminG.items[i].font.name = "Montserrat ExtraBold";
+        searchResultsminG.items[i].font.color = "#3a3c42";
+        searchResultsminG.items[i].font.highlightColor = "#E3FF50";
+        searchResultsminG.items[i].font.bold = true;
+      }
+      await context.sync();
+
+      //Wiegeprotokoll Maximal Gewicht ausfüllen
+      const searchResultsmaxG = context.document.body.search("maxG", { ignorePunct: true });
+      searchResultsmaxG.load("font");
+      searchResultsmaxG.load("context");
+      await context.sync();
+      console.log(new Error("Found count: " + searchResultsmaxG.items.length));
+      for (let i = 0; i < searchResultsmaxG.items.length; i++) {
+        searchResultsmaxG.items[i].insertText("120", Word.InsertLocation.start);
+        searchResultsmaxG.items[i].font.name = "Montserrat ExtraBold";
+        searchResultsmaxG.items[i].font.color = "#3a3c42";
+        searchResultsmaxG.items[i].font.highlightColor = "#E3FF50";
+        searchResultsmaxG.items[i].font.bold = true;
+      }
+      await context.sync();
     });
   };
-
   // <DefaultButton onClick={this.handleSubmit}>Submit</DefaultButton>
   // const maskFormat: { [key: string]: RegExp } = {
   //   "*": /[a-zA-Z0-9_]/,
