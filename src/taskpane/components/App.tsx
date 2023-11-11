@@ -682,7 +682,7 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
 
       //Wiegeprotokoll Mindest Gewicht ausfüllen
-      const searchResultsminG = context.document.body.search("minG", { ignorePunct: true });
+      const searchResultsminG = context.document.body.search("MinG", { ignorePunct: true });
       searchResultsminG.load("font");
       searchResultsminG.load("context");
       await context.sync();
@@ -697,7 +697,7 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
 
       //Wiegeprotokoll Maximal Gewicht ausfüllen
-      const searchResultsmaxG = context.document.body.search("maxG", { ignorePunct: true });
+      const searchResultsmaxG = context.document.body.search("MaxG", { ignorePunct: true });
       searchResultsmaxG.load("font");
       searchResultsmaxG.load("context");
       await context.sync();
