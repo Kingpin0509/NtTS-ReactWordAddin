@@ -631,7 +631,7 @@ export default class App extends React.Component<AppProps, AppState> {
   clickWiegeprotokollerstellen = async () => {
     return Word.run(async (context) => {
       context.document.body.clear();
-      context.document.load.prototype("./../../../assets/AFKWiegeprotokollSpat.docx", Word.InsertLocation.replace);
+      context.document.load("./../../../assets/AFKWiegeprotokollSpat.docx");
       await context.sync();
 
       //Suche nach ProduktX
