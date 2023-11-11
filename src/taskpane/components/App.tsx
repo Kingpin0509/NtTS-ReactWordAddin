@@ -630,16 +630,26 @@ export default class App extends React.Component<AppProps, AppState> {
   //Wiegeprotokoll erstellen
   clickWiegeprotokollerstellen = async () => {
     return Word.run(async (context) => {
+      context.document.body.clear();
+      await context.sync();
+
+      context.document.body.insertFileFromBase64(
+        "./../../../assets/AFKWiegeprotokollSpat.docx",
+        Word.InsertLocation.replace
+      );
+      await context.sync();
+
       //Suche nach ProduktX
       // Queue a command to search the document and ignore punctuation.
-      const searchResultsProduktX = context.document.body.search("ProduktX", { ignorePunct: true });
+      const searchResultsProduktX = context.document.body.search("Produktfeld", { ignorePunct: true });
       // Queue a command to load the font property values.
       searchResultsProduktX.load("font");
       // Queue a command to load the font property values.
       searchResultsProduktX.load("context");
       // Synchronize the document state.
       await context.sync();
-      console.log(new Error("Found count: " + searchResultsProduktX.items.length));
+
+      console.log("Found count: " + searchResultsProduktX.items.length);
       // Queue a set of commands to change the font for each found item.
       for (let i = 0; i < searchResultsProduktX.items.length; i++) {
         searchResultsProduktX.items[i].insertText("Gerstengras", Word.InsertLocation.start);
@@ -652,11 +662,11 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
 
       //Wiegeprotokoll Auftrag ausfüllen
-      const searchResultsAuftragX = context.document.body.search("AuftragX", { ignorePunct: true });
+      const searchResultsAuftragX = context.document.body.search("Auftragsfeld", { ignorePunct: true });
       searchResultsAuftragX.load("font");
       searchResultsAuftragX.load("context");
       await context.sync();
-      console.log(new Error("Found count: " + searchResultsAuftragX.items.length));
+      console.log("Found count: " + searchResultsAuftragX.items.length);
       for (let i = 0; i < searchResultsAuftragX.items.length; i++) {
         searchResultsAuftragX.items[i].insertText("AFK-425", Word.InsertLocation.start);
         searchResultsAuftragX.items[i].font.name = "Montserrat ExtraBold";
@@ -671,7 +681,7 @@ export default class App extends React.Component<AppProps, AppState> {
       searchResultsSollG.load("font");
       searchResultsSollG.load("context");
       await context.sync();
-      console.log(new Error("Found count: " + searchResultsSollG.items.length));
+      console.log("Found count: " + searchResultsSollG.items.length);
       for (let i = 0; i < searchResultsSollG.items.length; i++) {
         searchResultsSollG.items[i].insertText("100", Word.InsertLocation.start);
         searchResultsSollG.items[i].font.name = "Montserrat ExtraBold";
@@ -682,11 +692,11 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
 
       //Wiegeprotokoll Mindest Gewicht ausfüllen
-      const searchResultsminG = context.document.body.search("MinG", { ignorePunct: true });
+      const searchResultsminG = context.document.body.search("minG", { ignorePunct: true });
       searchResultsminG.load("font");
       searchResultsminG.load("context");
       await context.sync();
-      console.log(new Error("Found count: " + searchResultsminG.items.length));
+      console.log("Found count: " + searchResultsminG.items.length);
       for (let i = 0; i < searchResultsminG.items.length; i++) {
         searchResultsminG.items[i].insertText("80", Word.InsertLocation.start);
         searchResultsminG.items[i].font.name = "Montserrat ExtraBold";
@@ -697,11 +707,11 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
 
       //Wiegeprotokoll Maximal Gewicht ausfüllen
-      const searchResultsmaxG = context.document.body.search("MaxG", { ignorePunct: true });
+      const searchResultsmaxG = context.document.body.search("maxG", { ignorePunct: true });
       searchResultsmaxG.load("font");
       searchResultsmaxG.load("context");
       await context.sync();
-      console.log(new Error("Found count: " + searchResultsmaxG.items.length));
+      console.log("Found count: " + searchResultsmaxG.items.length);
       for (let i = 0; i < searchResultsmaxG.items.length; i++) {
         searchResultsmaxG.items[i].insertText("120", Word.InsertLocation.start);
         searchResultsmaxG.items[i].font.name = "Montserrat ExtraBold";
