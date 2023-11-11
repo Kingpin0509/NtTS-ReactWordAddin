@@ -1,6 +1,6 @@
 {
-  "name": "nietiet-gmbh-office-addin",
-  "version": "3.9.0",
+  "name": "nietiet-gmbh-word-addin",
+  "version": "4.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/Kingpin0509/NtTS-ReactWordAddin.git"
