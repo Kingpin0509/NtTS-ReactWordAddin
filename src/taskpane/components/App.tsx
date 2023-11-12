@@ -634,7 +634,7 @@ export default class App extends React.Component<AppProps, AppState> {
       await context.sync();
 
       context.document.body.insertFileFromBase64(
-        "./../../../assets/AFKWiegeprotokollSpat.docx",
+        "./../../../assets/AFKWiegeprotokollSpat.dotxencoded.txt",
         Word.InsertLocation.start
       );
       await context.sync();
