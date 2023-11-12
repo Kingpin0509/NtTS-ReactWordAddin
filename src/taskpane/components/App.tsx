@@ -630,6 +630,17 @@ export default class App extends React.Component<AppProps, AppState> {
   //Wiegeprotokoll erstellen
   clickWiegeprotokollerstellen = async () => {
     return Word.run(async (context) => {
+      // Inserts the body from the external document at the beginning of this document.
+      // Run a batch operation against the Word object model.
+      // Create a proxy object for the document body.
+      const externalDocument = "./../../../assets/AFKWiegeprotokollSpat.docx";
+      const body = context.document.body;
+      // Queue a command to insert the Base64-encoded string representation of the body of the selected .docx file at the beginning of the current document.
+      body.insertFileFromBase64(externalDocument, Word.InsertLocation.start);
+      // Synchronize the document state by executing the queued commands, and return a promise to indicate task completion.
+      await context.sync();
+      console.log("Added Base64-encoded text to the beginning of the document body.");
+
       // context.document.body.clear();
       // await context.sync();
       // let externalDocument;
@@ -646,10 +657,10 @@ export default class App extends React.Component<AppProps, AppState> {
       // reader.readAsDataURL("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt");
       // await context.sync();
 
-      const body = context.document.body;
-      body.insertFileFromBase64("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt", Word.InsertLocation.start);
-      await context.sync();
-      console.log("Added Base64-encoded text to the beginning of the document body.");
+      // const body = context.document.body;
+      // body.insertFileFromBase64("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt", Word.InsertLocation.start);
+      // await context.sync();
+      // console.log("Added Base64-encoded text to the beginning of the document body.");
 
       // context.document.body.insertFileFromBase64(
       //   "./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt",
