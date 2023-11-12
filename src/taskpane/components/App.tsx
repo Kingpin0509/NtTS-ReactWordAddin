@@ -630,11 +630,11 @@ export default class App extends React.Component<AppProps, AppState> {
   //Wiegeprotokoll erstellen
   clickWiegeprotokollerstellen = async () => {
     return Word.run(async (context) => {
-      context.document.body.clear();
-      await context.sync();
+      // context.document.body.clear();
+      // await context.sync();
 
       context.document.body.insertFileFromBase64(
-        "./../../../assets/AFKWiegeprotokollSpat.dotxencoded.txt",
+        "./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt",
         Word.InsertLocation.start
       );
       await context.sync();
