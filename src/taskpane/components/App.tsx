@@ -633,7 +633,7 @@ export default class App extends React.Component<AppProps, AppState> {
       // Inserts the body from the external document at the beginning of this document.
       // Run a batch operation against the Word object model.
       // Create a proxy object for the document body.
-      const externalDocument = "./../../../assets/AFKWiegeprotokollSpat.docx";
+      const externalDocument = "./../../../assets/AFKWiegeprotokollSpat.docxencodedbase64url";
       const body = context.document.body;
       // Queue a command to insert the Base64-encoded string representation of the body of the selected .docx file at the beginning of the current document.
       body.insertFileFromBase64(externalDocument, Word.InsertLocation.start);
