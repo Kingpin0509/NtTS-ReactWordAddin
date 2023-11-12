@@ -632,8 +632,12 @@ export default class App extends React.Component<AppProps, AppState> {
     return Word.run(async (context) => {
       // context.document.body.clear();
       // await context.sync();
+
       const body = context.document.body;
-      body.insertFileFromBase64("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt", Word.InsertLocation.start);
+      body.insertFileFromBase64(
+        "./../../../assets/AFKWiegeprotokollSpat.docxencodedbase64url.txt",
+        Word.InsertLocation.start
+      );
       await context.sync();
       console.log("Added Base64-encoded text to the beginning of the document body.");
 
