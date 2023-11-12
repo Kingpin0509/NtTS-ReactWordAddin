@@ -632,12 +632,22 @@ export default class App extends React.Component<AppProps, AppState> {
     return Word.run(async (context) => {
       // context.document.body.clear();
       // await context.sync();
+      // let externalDocument;
+      // // Retrieve the file and set up an HTML FileReader element.
+      // const myFile = "./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt";
+      // const reader = new FileReader();
+
+      // reader.onload = (event) => {
+      //   // Remove the metadata before the Base64-encoded string.
+      //   const startIndex = reader.result.toString().indexOf("base64,");
+      //   externalDocument = reader.result.toString().substr(startIndex + 7);
+      // };
+
+      // reader.readAsDataURL("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt");
+      // await context.sync();
 
       const body = context.document.body;
-      body.insertFileFromBase64(
-        "./../../../assets/AFKWiegeprotokollSpat.docxencodedbase64url.txt",
-        Word.InsertLocation.start
-      );
+      body.insertFileFromBase64("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt", Word.InsertLocation.start);
       await context.sync();
       console.log("Added Base64-encoded text to the beginning of the document body.");
 
