@@ -770,7 +770,7 @@ export default class App extends React.Component<AppProps, AppState> {
                   name="afk"
                   mask="***"
                   maskFormat={maskFormatnr}
-                  maskChar="0"
+                  maskChar=""
                   prefix="AFK-"
                 />
                 <MaskedTextField
@@ -779,7 +779,7 @@ export default class App extends React.Component<AppProps, AppState> {
                   name="auftrag"
                   mask="***"
                   maskFormat={maskFormatnr}
-                  maskChar="0"
+                  maskChar=""
                   suffix="  - A   "
                 />
               </Stack>
