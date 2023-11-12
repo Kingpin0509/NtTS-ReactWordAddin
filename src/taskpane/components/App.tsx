@@ -632,12 +632,16 @@ export default class App extends React.Component<AppProps, AppState> {
     return Word.run(async (context) => {
       // context.document.body.clear();
       // await context.sync();
-
-      context.document.body.insertFileFromBase64(
-        "./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt",
-        Word.InsertLocation.start
-      );
+      const body = context.document.body;
+      body.insertFileFromBase64("./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt", Word.InsertLocation.start);
       await context.sync();
+      console.log("Added Base64-encoded text to the beginning of the document body.");
+
+      // context.document.body.insertFileFromBase64(
+      //   "./../../../assets/AFKWiegeprotokollSpat.docxencoded.txt",
+      //   Word.InsertLocation.start
+      // );
+      // await context.sync();
 
       //Suche nach ProduktX
       // Queue a command to search the document and ignore punctuation.
